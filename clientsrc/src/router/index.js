@@ -4,6 +4,12 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 // @ts-ignore
 import Profile from "../views/Profile.vue";
+// @ts-ignore
+import Events from "../views/Events.vue";
+// @ts-ignore
+import Admin from "../views/Admin.vue";
+// @ts-ignore
+import Contact from "../views/Contact.vue"
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(VueRouter);
@@ -19,7 +25,23 @@ const routes = [
     name: "Profile",
     component: Profile,
     beforeEnter: authGuard
-  }
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
+    beforeEnter: authGuard
+  },
+  {
+    path: "/events",
+    name: "Events",
+    component: Events,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+  },
 ];
 
 const router = new VueRouter({
