@@ -9,7 +9,9 @@ import Events from "../views/Events.vue";
 // @ts-ignore
 import Admin from "../views/Admin.vue";
 // @ts-ignore
-import Contact from "../views/Contact.vue"
+import Contact from "../views/Contact.vue";
+// @ts-ignore
+import Judges from "../views/Judges.vue";
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(VueRouter);
@@ -36,6 +38,11 @@ const routes = [
     path: "/events",
     name: "Events",
     component: Events,
+  },
+  {
+    path: "/judges",
+    name: "Judges",
+    component: Judges,
   },
   {
     path: "/contact",

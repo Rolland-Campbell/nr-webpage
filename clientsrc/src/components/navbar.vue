@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link class="navbar-brand" :to="{ name: 'Home' }">AppName</router-link>
+    <router-link class="navbar-brand" :to="{ name: 'Home' }">Northern Rockies</router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -20,6 +20,9 @@
         <li class="nav-item" :class="{ active: $route.name == 'Events' }">
           <router-link :to="{ name: 'Events' }" class="nav-link">Events</router-link>
         </li>
+        <li class="nav-item" :class="{ active: $route.name == 'Judges' }">
+          <router-link :to="{ name: 'Judges' }" class="nav-link">Certified Judges</router-link>
+        </li>
         <li class="nav-item" :class="{ active: $route.name == 'Contact' }">
           <router-link :to="{ name: 'Contact' }" class="nav-link">Contact Us</router-link>
         </li>
@@ -30,9 +33,20 @@
         >
           <router-link class="nav-link" :to="{ name: 'Profile' }">Profile</router-link>
         </li>
+        <li
+          class="nav-item"
+          v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
+          :class="{ active: $route.name == 'Admin' }"
+        >
+          <router-link class="nav-link" :to="{ name: 'Admin' }">Admin</router-link>
+        </li>
       </ul>
       <span class="navbar-text">
-        <button class="btn btn-success" @click="login" v-if="!$auth.isAuthenticated">Login</button>
+        <button
+          class="btn btn-success"
+          @click="login"
+          v-if="!$auth.isAuthenticated"
+        >Login / Register</button>
         <button class="btn btn-danger" @click="logout" v-else>logout</button>
       </span>
     </div>
@@ -50,6 +64,7 @@ export default {
       this.$store.dispatch("setBearer", this.$auth.bearer);
       console.log("this.$auth.user: ");
       console.log(this.$auth.user);
+      console.log(this.$auth.userInfo);
       this.$store.dispatch("getProfile");
     },
     async logout() {
@@ -61,4 +76,8 @@ export default {
 </script>
 
 <style>
+.logoSize {
+  height: 8vh;
+  width: 10vw;
+}
 </style>
