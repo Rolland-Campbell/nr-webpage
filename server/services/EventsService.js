@@ -1,20 +1,14 @@
 import { dbContext } from "../db/DbContext";
 import { BadRequest } from "../utils/Errors";
+import Events from "../models/Event"
+import mongoose from "mongoose";
+
+const _repository = mongoose.model("Events", Events);
 
 class EventsService {
-  async findAll(query = {}) {
-    let values = await dbContext.Values.find(query).populate(
-      "creator",
-      "name picture"
-    );
-    return values;
-  }
-  async findById(id) {
-    let value = await dbContext.Values.findById(id);
-    if (!value) {
-      throw new BadRequest("Invalid Id");
-    }
-    return value;
+
+  async create(data) {
+    return await _repository.create(data)
   }
 }
 

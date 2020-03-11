@@ -17,7 +17,8 @@ let api = Axios.create({
 
 export default new Vuex.Store({
   state: {
-    profile: {}
+    profile: {},
+    events: [],
   },
   mutations: {
     setProfile(state, profile) {
@@ -25,7 +26,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setBearer({}, bearer) {
+    setBearer({ }, bearer) {
       api.defaults.headers.authorization = bearer;
     },
     resetBearer() {
@@ -37,6 +38,15 @@ export default new Vuex.Store({
         commit("setProfile", res.data);
       } catch (error) {
         console.error(error);
+      }
+    },
+    async createEvent({ commit }, data) {
+      try {
+        let res = await api.post("events", data);
+        console.log("from store", data);
+
+      } catch (error) {
+        console.error(error)
       }
     }
   }

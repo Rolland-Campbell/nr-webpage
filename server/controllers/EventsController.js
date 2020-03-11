@@ -1,7 +1,8 @@
 import express from "express";
 import BaseController from "../utils/BaseController";
-import { valuesService } from "../services/ValuesService";
 import auth0Provider from "@bcwdev/auth0provider";
+import { eventsService } from "../services/EventsService";
+import { Forbidden } from "../utils/Errors";
 
 export class EventsController extends BaseController {
   constructor() {
@@ -22,8 +23,12 @@ export class EventsController extends BaseController {
   async create(req, res, next) {
     try {
       // NOTE NEVER TRUST THE CLIENT TO ADD THE CREATOR ID
-      req.body.creator = req.user.email;
-      res.send(req.body);
+      req.body.creator = req.userInfo.email;
+      if (req.userInfo.app_metadata.role != "admin") {
+        throw new Forbidden('You must be an Admin to create an event.')
+      }
+      let data = eventsService.create(req.body);
+      return res.status(201).send(data)
     } catch (error) {
       next(error);
     }
