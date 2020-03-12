@@ -19,10 +19,14 @@ export default new Vuex.Store({
   state: {
     profile: {},
     events: [],
+    judges: []
   },
   mutations: {
     setProfile(state, profile) {
       state.profile = profile;
+    },
+    setEvents(state, data) {
+      state.events = data;
     }
   },
   actions: {
@@ -40,11 +44,24 @@ export default new Vuex.Store({
         console.error(error);
       }
     },
+    async getEvents({ commit }) {
+      try {
+        let res = await api.get("events");
+        commit("setEvents", res.data);
+      } catch (error) {
+        console.error(error)
+      }
+    },
     async createEvent({ commit }, data) {
       try {
         let res = await api.post("events", data);
-        console.log("from store", data);
-
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async addJudge({ commit }, data) {
+      try {
+        let res = await api.post("judges", data);
       } catch (error) {
         console.error(error)
       }

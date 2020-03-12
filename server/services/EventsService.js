@@ -7,6 +7,9 @@ const _repository = mongoose.model("Events", Events);
 
 class EventsService {
 
+  async getAll() {
+    return await _repository.find({})
+  }
   async create(data) {
     return await _repository.create(data)
   }

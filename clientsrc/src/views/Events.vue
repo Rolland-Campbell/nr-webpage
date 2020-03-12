@@ -1,20 +1,59 @@
 <template>
-  <div class="events">Events</div>
+  <div class="events container-fluid">
+    <div class="row titleRow">
+      <h1>Upcoming Events</h1>
+    </div>
+    <div class="row cardRow">
+      <EventCards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
+    </div>
+  </div>
 </template>
 
 
 <script>
+import EventCards from "../components/eventCard";
 export default {
   name: "Events",
   data() {
     return {};
   },
-  computed: {},
+  mounted() {
+    return this.$store.dispatch("getEvents");
+  },
+  computed: {
+    events() {
+      return this.$store.state.events;
+    }
+  },
   methods: {},
-  components: {}
+  components: {
+    EventCards
+  }
 };
 </script>
 
 
 <style scoped>
+.events {
+  background-image: url("../assets/eventsbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 92vh;
+}
+
+.titleRow {
+  color: white;
+  text-shadow: 1px 1px black;
+  justify-content: center;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: center;
+}
+
+.eventCards {
+  margin: 10px;
+}
 </style>
