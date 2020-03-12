@@ -70,12 +70,40 @@ export default new Vuex.Store({
         console.error(error)
       }
     },
+    async editEvent({ commit }, data) {
+      try {
+        let res = await api.put("/events/" + data.id, data)
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async deleteEvent({ commit }, data) {
+      try {
+        let res = await api.delete("/events/" + data.id)
+      } catch (error) {
+        console.error(error)
+      }
+    },
     async addJudge({ commit }, data) {
       try {
         let res = await api.post("judges", data);
       } catch (error) {
         console.error(error)
       }
-    }
+    },
+    async editJudge({ commit }, data) {
+      try {
+        let res = await api.put("/judges/" + data.id, data)
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async deleteJudge({ commit }, data) {
+      try {
+        let res = await api.delete("/judges/" + data.id)
+      } catch (error) {
+        console.error(error)
+      }
+    },
   }
 });

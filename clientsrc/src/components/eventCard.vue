@@ -13,10 +13,15 @@
           class="buttonRow"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
         >
-          <button class="btn btn-warning">
+          <button
+            class="btn btn-warning"
+            data-toggle="modal"
+            :data-target="'#editModal'+ eventProps.id"
+          >
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
-          <button class="btn btn-danger">
+          <eventEditModal :id="'editModal'+eventProps.id" :edit="eventProps" />
+          <button class="btn btn-danger" @click="deleteEvent">
             <i class="fa fa-trash" aria-hidden="true"></i>
           </button>
         </div>
@@ -27,6 +32,7 @@
 
 
 <script>
+import EventEditModal from "../components/editEventModal";
 export default {
   name: "EventCard",
   props: ["eventProps"],
@@ -37,8 +43,14 @@ export default {
     return this.$store.state.events;
   },
   computed: {},
-  methods: {},
-  components: {}
+  methods: {
+    deleteEvent() {
+      this.$store.dispatch("deleteEvent", this.eventProps);
+    }
+  },
+  components: {
+    EventEditModal
+  }
 };
 </script>
 
