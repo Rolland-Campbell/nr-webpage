@@ -39,7 +39,19 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 92vh;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .events {
+    background-image: url("../assets/eventsbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
 }
 
 .titleRow {

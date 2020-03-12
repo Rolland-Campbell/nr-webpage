@@ -1,14 +1,12 @@
 <template>
-  <div class="eventCard">
+  <div class="judgeCard col-10 offset-1 col-md-2">
     <div class="card">
       <div class="card-body">
-        <h2 class="card-title">{{this.eventProps.title}}</h2>
+        <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
+        <h2 class="card-title">{{this.judgeProps.name}}</h2>
         <hr />
-        <h3>Date: {{this.eventProps.eventDate}}</h3>
-        <h4>Time: {{this.eventProps.eventTime}}</h4>
-        <h4>{{this.eventProps.description}}</h4>
-        <h4>Location: {{this.eventProps.location}}</h4>
-        <h4>More Info: {{this.eventProps.link}}</h4>
+        <h3>{{this.judgeProps.date}}</h3>
+        <p>{{this.judgeProps.homeTown}}</p>
         <div
           class="buttonRow"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
@@ -28,13 +26,10 @@
 
 <script>
 export default {
-  name: "EventCard",
-  props: ["eventProps"],
+  name: "JudgeCard",
+  props: ["judgeProps"],
   data() {
     return {};
-  },
-  mounted() {
-    return this.$store.state.events;
   },
   computed: {},
   methods: {},
@@ -44,6 +39,10 @@ export default {
 
 
 <style scoped>
+.judgePic {
+  height: 30vh;
+  width: 100%;
+}
 .card {
   background-color: rgba(255, 255, 255, 0.616);
   border-color: black;

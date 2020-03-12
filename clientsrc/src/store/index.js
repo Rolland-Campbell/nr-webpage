@@ -27,6 +27,9 @@ export default new Vuex.Store({
     },
     setEvents(state, data) {
       state.events = data;
+    },
+    setJudges(state, data) {
+      state.judges = data;
     }
   },
   actions: {
@@ -48,6 +51,14 @@ export default new Vuex.Store({
       try {
         let res = await api.get("events");
         commit("setEvents", res.data);
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async getJudges({ commit }) {
+      try {
+        let res = await api.get("judges");
+        commit("setJudges", res.data);
       } catch (error) {
         console.error(error)
       }

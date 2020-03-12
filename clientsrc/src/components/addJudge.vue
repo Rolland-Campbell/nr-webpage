@@ -61,4 +61,10 @@ input {
 .buffer {
   height: 18vh;
 }
+
+@media only screen and (max-width: 600px) {
+  .buffer {
+    height: 3vh;
+  }
+}
 </style>

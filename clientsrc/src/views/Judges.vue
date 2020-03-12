@@ -1,20 +1,71 @@
 <template>
-  <div class="judges">cards of judges, bio</div>
+  <div class="judges container-fluid">
+    <div class="row titleRow">
+      <h1>Certified Judges</h1>
+    </div>
+    <div class="row cardRow">
+      <JudgeCards class="judgeCards" v-for="judge in judges" :key="judge._id" :judgeProps="judge" />
+    </div>
+  </div>
 </template>
 
 
 <script>
+import JudgeCards from "../components/judgeCard";
 export default {
   name: "Judges",
   data() {
     return {};
   },
-  computed: {},
+  mounted() {
+    return this.$store.dispatch("getJudges");
+  },
+  computed: {
+    judges() {
+      return this.$store.state.judges;
+    }
+  },
   methods: {},
-  components: {}
+  components: {
+    JudgeCards
+  }
 };
 </script>
 
 
 <style scoped>
+.judges {
+  background-image: url("../assets/judgesbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 92vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .judges {
+    background-image: url("../assets/judgesbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+.titleRow {
+  color: white;
+  text-shadow: 1px 1px black;
+  justify-content: center;
+}
+
+.judgeCards {
+  margin: 10px;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: center;
+}
 </style>

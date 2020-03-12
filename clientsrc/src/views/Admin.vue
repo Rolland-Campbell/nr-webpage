@@ -35,6 +35,18 @@ export default {
   height: 92vh;
 }
 
+@media only screen and (max-width: 600px) {
+  .admin {
+    background-image: url("../assets/adminbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
 .formRow {
   justify-content: space-evenly;
 }
