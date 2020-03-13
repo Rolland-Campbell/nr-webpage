@@ -77,4 +77,12 @@ export default {
   display: flex;
   justify-content: space-evenly;
 }
+
+h3 {
+  padding-bottom: 3vh;
+}
+
+h4 {
+  padding-bottom: 3vh;
+}
 </style>

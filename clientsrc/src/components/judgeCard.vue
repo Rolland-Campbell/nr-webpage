@@ -11,9 +11,14 @@
           class="buttonRow"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
         >
-          <button class="btn btn-warning">
+          <button
+            class="btn btn-warning"
+            data-toggle="modal"
+            :data-target="'#editModal'+ judgeProps.id"
+          >
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
+          <judgeEditModal :id="'editModal'+ judgeProps.id" :edit="judgeProps" />
           <button class="btn btn-danger">
             <i class="fa fa-trash" aria-hidden="true" @click="deleteJudge"></i>
           </button>
@@ -25,6 +30,7 @@
 
 
 <script>
+import JudgeEditModal from "../components/judgeEditModal";
 export default {
   name: "JudgeCard",
   props: ["judgeProps"],
@@ -37,7 +43,9 @@ export default {
       this.$store.dispatch("deleteJudge", this.judgeProps);
     }
   },
-  components: {}
+  components: {
+    JudgeEditModal
+  }
 };
 </script>
 
@@ -45,7 +53,8 @@ export default {
 <style scoped>
 .judgePic {
   height: 30vh;
-  width: 100%;
+  width: 70%;
+  border-radius: 15px;
 }
 .card {
   background-color: rgba(255, 255, 255, 0.616);

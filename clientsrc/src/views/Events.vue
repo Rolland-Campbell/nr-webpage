@@ -39,7 +39,10 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 100vh;
+  height: 92vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -67,5 +70,6 @@ export default {
 
 .eventCards {
   margin: 10px;
+  width: 60vw;
 }
 </style>

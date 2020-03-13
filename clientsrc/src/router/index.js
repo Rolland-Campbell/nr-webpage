@@ -14,6 +14,9 @@ import Contact from "../views/Contact.vue";
 import Judges from "../views/Judges.vue";
 import { authGuard } from "@bcwdev/auth0-vue";
 
+// @ts-ignore
+import Practices from "../views/Practices.vue"
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -48,6 +51,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/practices",
+    name: "Practices",
+    component: Practices,
   },
 ];
 

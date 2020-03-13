@@ -105,5 +105,12 @@ export default new Vuex.Store({
         console.error(error)
       }
     },
+    async textRequest({ commit }, data) {
+      try {
+        let res = await api.post("textGroup", data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
   }
 });
