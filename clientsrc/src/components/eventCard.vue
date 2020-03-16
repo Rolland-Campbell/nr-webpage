@@ -2,26 +2,34 @@
   <div class="eventCard">
     <div class="card">
       <div class="card-body">
+        <img :src="this.eventProps.logo" alt="logo" />
         <h2 class="card-title">{{this.eventProps.title}}</h2>
         <hr />
         <h3>Date: {{this.eventProps.eventDate}}</h3>
         <h4>Time: {{this.eventProps.eventTime}}</h4>
-        <h4>{{this.eventProps.description}}</h4>
+        <h5>Registration Cost: {{this.eventProps.cost}}</h5>
+        <h4>Event Information: {{this.eventProps.description}}</h4>
         <h4>Location: {{this.eventProps.location}}</h4>
         <h4>More Info: {{this.eventProps.link}}</h4>
+        <button
+          class="btn btn-info"
+          data-toggle="modal"
+          data-target="#regModal"
+        >Register for this Event</button>
+        <RegModal :eventProps="eventProps" />
         <div
           class="buttonRow"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
         >
           <button
-            class="btn btn-warning"
+            class="btn btnSm btn-warning"
             data-toggle="modal"
             :data-target="'#editModal'+ eventProps.id"
           >
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
           <eventEditModal :id="'editModal'+eventProps.id" :edit="eventProps" />
-          <button class="btn btn-danger" @click="deleteEvent">
+          <button class="btn btnSm btn-danger" @click="deleteEvent">
             <i class="fa fa-trash" aria-hidden="true"></i>
           </button>
         </div>
@@ -32,6 +40,7 @@
 
 
 <script>
+import RegModal from "../components/registrationModal";
 import EventEditModal from "../components/editEventModal";
 export default {
   name: "EventCard",
@@ -49,7 +58,8 @@ export default {
     }
   },
   components: {
-    EventEditModal
+    EventEditModal,
+    RegModal
   }
 };
 </script>
@@ -66,7 +76,7 @@ export default {
   text-align: center;
 }
 
-.btn {
+.btnSm {
   border-radius: 50%;
   border-color: black;
   border-style: solid;
@@ -78,11 +88,15 @@ export default {
   justify-content: space-evenly;
 }
 
-h3 {
+h3,
+h4,
+h5 {
   padding-bottom: 3vh;
 }
 
-h4 {
-  padding-bottom: 3vh;
+img {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
 }
 </style>

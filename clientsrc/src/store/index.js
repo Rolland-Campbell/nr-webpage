@@ -19,7 +19,8 @@ export default new Vuex.Store({
   state: {
     profile: {},
     events: [],
-    judges: []
+    judges: [],
+    activeRegister: {}
   },
   mutations: {
     setProfile(state, profile) {
@@ -30,6 +31,9 @@ export default new Vuex.Store({
     },
     setJudges(state, data) {
       state.judges = data;
+    },
+    setActiveReg(state, data) {
+      state.activeRegister = data;
     }
   },
   actions: {
@@ -38,6 +42,9 @@ export default new Vuex.Store({
     },
     resetBearer() {
       api.defaults.headers.authorization = "";
+    },
+    register({ commit }, data) {
+      commit("setActiveReg", data)
     },
     async getProfile({ commit }) {
       try {
@@ -65,6 +72,7 @@ export default new Vuex.Store({
     },
     async createEvent({ commit }, data) {
       try {
+        debugger
         let res = await api.post("events", data);
       } catch (error) {
         console.error(error)
