@@ -33,6 +33,8 @@ export default {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 92vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 600px) {

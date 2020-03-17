@@ -72,7 +72,6 @@ export default new Vuex.Store({
     },
     async createEvent({ commit }, data) {
       try {
-        debugger
         let res = await api.post("events", data);
       } catch (error) {
         console.error(error)

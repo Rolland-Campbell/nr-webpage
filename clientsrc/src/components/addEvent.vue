@@ -7,6 +7,10 @@
       <h5>Organization's Logo</h5>
     </label>
     <input id="logo" type="text" placeholder="Add a logo" v-model="eventInfo.logo" />
+    <label for="#host">
+      <h5>Hosting Organization</h5>
+    </label>
+    <input id="host" type="text" placeholder="Title" v-model="eventInfo.host" required />
     <label for="#title">
       <h5>Event Title</h5>
     </label>

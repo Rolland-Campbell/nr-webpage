@@ -15,10 +15,12 @@
     "@bcwdev/auth0provider": "^0.0.6",
     "cors": "^2.8.1",
     "dotenv": "^8.1.0",
+    "ejs": "^3.0.1",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "mongoose": "^5.8.0",
+    "paypal-rest-sdk": "^1.8.1",
     "socket.io": "^2.3.0"
   },
   "engines": {

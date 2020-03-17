@@ -5,6 +5,7 @@ const Event = new Schema(
   {
     logo: { type: String },
     title: { type: String, required: true },
+    host: { type: String, required: true },
     eventDate: { type: String, required: true },
     eventTime: { type: String, required: true },
     description: { type: String, required: true },

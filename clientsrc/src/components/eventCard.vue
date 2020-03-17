@@ -7,6 +7,7 @@
         <hr />
         <h3>Date: {{this.eventProps.eventDate}}</h3>
         <h4>Time: {{this.eventProps.eventTime}}</h4>
+        <h4>Hosting Organization: {{this.eventProps.host}}</h4>
         <h5>Registration Cost: {{this.eventProps.cost}}</h5>
         <h4>Event Information: {{this.eventProps.description}}</h4>
         <h4>Location: {{this.eventProps.location}}</h4>

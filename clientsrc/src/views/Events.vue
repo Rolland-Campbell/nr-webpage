@@ -70,6 +70,6 @@ export default {
 
 .eventCards {
   margin: 10px;
-  width: 60vw;
+  width: 30vw;
 }
 </style>
