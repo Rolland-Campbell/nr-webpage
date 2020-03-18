@@ -1,7 +1,7 @@
 <template>
   <div class="judges container-fluid">
     <div class="row titleRow">
-      <h1>Certified Judges</h1>
+      <h1>Heavy Athletics Judges and Athletics Directors</h1>
     </div>
     <div class="row cardRow">
       <JudgeCards class="judgeCards" v-for="judge in judges" :key="judge._id" :judgeProps="judge" />

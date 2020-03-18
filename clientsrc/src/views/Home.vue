@@ -7,6 +7,20 @@
     </div>
 
     <div class="row">
+      <div class="col cardRow">
+        <div class="col eventTitle">
+          <b>Upcoming Events</b>
+          <smallEventCards
+            class="eventCards"
+            v-for="event in events"
+            :key="event._id"
+            :eventProps="event"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col eventTitle">
         <b>Scottish Heavy Events</b>
         <h4>For more information on each event, click a card</h4>
@@ -186,15 +200,20 @@
 
 
 <script>
+import SmallEventCards from "../components/smallEventCard";
 import EventModal from "../components/eventModal";
 export default {
   name: "home",
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    events() {
+      return this.$store.state.events;
+    }
+  },
   methods: {},
-  components: { EventModal }
+  components: { EventModal, SmallEventCards }
 };
 </script>
 
@@ -218,11 +237,11 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .titleRow {
-    background-color: rgba(255, 255, 255, 0.473);
+    background-color: black;
     padding: 5px;
-    color: black;
+    color: white;
     font-size: larger;
-    text-shadow: 1px 1px white;
+    padding: 2vh;
   }
 }
 
@@ -230,6 +249,7 @@ export default {
   margin-top: 3vh;
   text-align: center;
   font-size: 4vh;
+  text-shadow: 1px 1px white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -280,7 +300,6 @@ export default {
 }
 
 .caberScore {
-  /* width: 35vw; */
   margin-bottom: 3vh;
 }
 
@@ -291,4 +310,21 @@ export default {
   margin-bottom: 2vh;
   margin-top: 2vhs;
 }
+
+.eventCards {
+  margin: 10px;
+  width: 25vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .eventCards {
+    margin: 10px;
+    width: 100%;
+  }
+}
+/* 
+.cardRow {
+  display: flex;
+  justify-content: space-evenly;
+} */
 </style>

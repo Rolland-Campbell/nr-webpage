@@ -5,7 +5,6 @@ import store from "./store";
 import { Auth0Plugin, onAuth } from "@bcwdev/auth0-vue";
 import { domain, clientId, audience } from "./authConfig";
 
-const paypal = require('paypal-rest-sdk');
 
 Vue.use(Auth0Plugin, {
   domain,
@@ -19,6 +18,15 @@ Vue.use(Auth0Plugin, {
     );
   }
 });
+
+Vue.filter("date", val => {
+  try {
+    let date = new Date(val)
+    return date.toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" })
+  } catch (error) {
+
+  }
+})
 
 new Vue({
   router,

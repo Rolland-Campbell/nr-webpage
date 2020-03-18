@@ -65,11 +65,18 @@ export default {
 
 .cardRow {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .eventCards {
   margin: 10px;
-  width: 30vw;
+  width: 25vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .eventCards {
+    margin: 10px;
+    width: 100%;
+  }
 }
 </style>

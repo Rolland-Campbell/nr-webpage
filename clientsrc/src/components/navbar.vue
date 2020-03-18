@@ -21,7 +21,7 @@
           <router-link :to="{ name: 'Events' }" class="nav-link">Events</router-link>
         </li>
         <li class="nav-item" :class="{ active: $route.name == 'Judges' }">
-          <router-link :to="{ name: 'Judges' }" class="nav-link">Certified Judges</router-link>
+          <router-link :to="{ name: 'Judges' }" class="nav-link">Judges / ADs</router-link>
         </li>
         <li class="nav-item" :class="{ active: $route.name == 'Contact' }">
           <router-link :to="{ name: 'Contact' }" class="nav-link">Contact Us</router-link>

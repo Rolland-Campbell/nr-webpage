@@ -1,23 +1,64 @@
 <template>
   <div class="eventCard">
     <div class="card">
-      <div class="card-body">
+      <div class="text-center m-2">
         <img :src="this.eventProps.logo" alt="logo" />
-        <h2 class="card-title">{{this.eventProps.title}}</h2>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">{{this.eventProps.title}}</h3>
         <hr />
-        <h3>Date: {{this.eventProps.eventDate}}</h3>
-        <h4>Time: {{this.eventProps.eventTime}}</h4>
-        <h4>Hosting Organization: {{this.eventProps.host}}</h4>
-        <h5>Registration Cost: {{this.eventProps.cost}}</h5>
-        <h4>Event Information: {{this.eventProps.description}}</h4>
-        <h4>Location: {{this.eventProps.location}}</h4>
-        <h4>More Info: {{this.eventProps.link}}</h4>
-        <button
-          class="btn btn-info"
-          data-toggle="modal"
-          data-target="#regModal"
-        >Register for this Event</button>
-        <RegModal :eventProps="eventProps" />
+        <h5>
+          <u>Date:</u>
+          {{this.eventProps.eventDate | date}}
+        </h5>
+        <h5>
+          <u>Time:</u>
+          {{this.eventProps.eventTime}}
+        </h5>
+        <h5>
+          <u>Host:</u>
+          {{this.eventProps.host}}
+        </h5>
+        <h5>
+          <u>Registration Cost:</u>
+          ${{this.eventProps.cost}}
+        </h5>
+        <h5>
+          <u>Location:</u>
+          {{this.eventProps.location}}
+        </h5>
+        <h5>
+          <u>Website:</u>&ensp;
+          <a class="webLink" :href="'https://'+this.eventProps.link">{{this.eventProps.link}}</a>
+        </h5>
+        <p>
+          <a
+            class="linkInfo"
+            data-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            <h5>
+              <u>Event Information:</u>&ensp;
+              <span class="smallText">(Click to open)</span>
+            </h5>
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body mb-3">
+            <h5>{{this.eventProps.description}}</h5>
+          </div>
+        </div>
+        <div class="regButton">
+          <button
+            class="btn btn-info"
+            data-toggle="modal"
+            data-target="#regModal"
+          >Register for this Event</button>
+          <RegModal :eventProps="eventProps" />
+        </div>
         <div
           class="buttonRow"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
@@ -74,6 +115,10 @@ export default {
 }
 
 .card-body {
+  text-align: left;
+}
+
+.card-title {
   text-align: center;
 }
 
@@ -83,21 +128,37 @@ export default {
   border-style: solid;
 }
 
+.regButton {
+  display: flex;
+  justify-content: center;
+}
+
 .buttonRow {
   margin-top: 2vh;
   display: flex;
   justify-content: space-evenly;
 }
 
-h3,
-h4,
 h5 {
-  padding-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 
 img {
   height: 20vh;
   width: 20vh;
-  border-radius: 50%;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+.linkInfo {
+  color: black;
+}
+
+.smallText {
+  font-size: small;
+}
+
+.webLink {
+  color: black;
 }
 </style>
