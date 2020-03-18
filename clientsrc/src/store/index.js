@@ -20,7 +20,9 @@ export default new Vuex.Store({
     profile: {},
     events: [],
     judges: [],
-    activeRegister: {}
+    activeRegister: {},
+    today: Date.now(),
+    endDate: Date.now() + 5184000000
   },
   mutations: {
     setProfile(state, profile) {

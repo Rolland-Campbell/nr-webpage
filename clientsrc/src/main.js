@@ -24,7 +24,7 @@ Vue.filter("date", val => {
     let date = new Date(val)
     return date.toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "numeric" })
   } catch (error) {
-
+    console.error(error)
   }
 })
 

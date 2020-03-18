@@ -1,5 +1,5 @@
 <template>
-  <div class="home containerf-fluid">
+  <div class="home container-fluid">
     <div class="row titleRow">
       <div
         class="col-10 col-md-8"
@@ -7,17 +7,13 @@
     </div>
 
     <div class="row">
-      <div class="col cardRow">
-        <div class="col eventTitle">
-          <b>Upcoming Events</b>
-          <smallEventCards
-            class="eventCards"
-            v-for="event in events"
-            :key="event._id"
-            :eventProps="event"
-          />
-        </div>
+      <div class="col eventTitle">
+        <b>Upcoming Events</b>
+        <h4>Click a card to go to the Event Page</h4>
       </div>
+    </div>
+    <div class="row eventCardRow">
+      <small-cards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
     </div>
 
     <div class="row">
@@ -39,7 +35,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="w4d">
+        <event-modal id="w4d">
           <div slot="title">Weight For Distance (W4D)</div>
           <div slot="about">
             <p>The Weight for Distance event consists of a weight made of metal and consist of a spherical or box weight with a chain and handle attached. The handle may be a ring, triangle, or a "D" shape. The implement shall not measure more than 18 inches in overall length from the bottom of the weight to the top of the handle. The official weight of each implement is the total weight, including the handle. The competitor may use either hand to throw the weight, but only one hand may be used. Any style may be used to throw the weight as long as it is deemed safe by the judge. The competitor may start and stop the throw provided that no part of the implement has made contact with the ground or the trig board during the aborted attempt. If the implement has made contact with the ground or the trig board after the attempt was initiated and prior to receiving permission from the judge, then the attempt will be a foul. Standard weights for these two events divided by throwing classes:</p>
@@ -61,7 +57,7 @@
               <b>Winged Trig</b> - The Winged Trig setup is becoming more popular. The back lines are the same distances as the Standard Trig. The biggest difference is that the throwing area is pushed out to 6ft 9in and narrows to the traditional 4ft 6in in the front. This trig setup originally was used during foul weather to give the athletes a larger throwing area. Another benefit to the winged trig is that it is easier to judge. If the athlete touches the line or goes over it, the throw is no good or "a scratch".
             </p>
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
       <!-- Card WOB-->
@@ -75,7 +71,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="wob">
+        <event-modal id="wob">
           <div slot="title">Weight Over Bar (WOB)</div>
           <div slot="about">
             <p>The athletes attempts to toss weight with an attached handle over a horizontal bar using only one hand. Each athlete is allowed three attempts at each height. Successful clearance of the height allows the athlete to advance into the next round at a greater height. The competition is determined by the highest successful toss with fewest misses being used to break tie scores. The weight for this event is also class specific.</p>
@@ -89,7 +85,7 @@
               <li>Women Masters and Women Lightweight throw a 21 lb weight.</li>
             </dl>
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
       <!-- Card Hammers-->
@@ -103,7 +99,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="hammers">
+        <event-modal id="hammers">
           <div slot="title">Scottish Hammers</div>
           <div slot="about">
             <p>This event is similar to the hammer throw as seen in modern-day track and field competitions, though with some differences. In the Scottish event, a round metal ball weighing 16 lb (kg) for light and 22 lb (kg) for heavy for the men classes. Women throw a 12 lb (kg) light hammer and 16 lb (kg) heavy hammer. The hammer weight is attached to the end of a shaft about 4 feet in length and made out of wood, bamboo, rattan, or plastic. The athlete will have thier back to the field. With the feet in a fixed position, the hammer is whirled about one’s head and thrown for distance over the shoulder. Hammer throwers sometimes employ specially designed footwear with flat blades to dig into the turf to maintain their balance and resist the centrifugal forces of the implement as it is whirled about the head. This substantially increases the distance attainable in the throw.</p>
@@ -112,7 +108,7 @@
             <img src="../assets/hammerSpades.jpg" alt="hammer spades" class="hammerSpades" />
             <p>Athletes will sometimes wear boot spades to help hold their feet in place. This helps the athlete increase the distances they can throw.</p>
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
       <!-- Card Stones-->
@@ -126,7 +122,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="stones">
+        <event-modal id="stones">
           <div slot="title">Braemar and Open Stones</div>
           <div slot="about">
             <p>
@@ -146,7 +142,7 @@
               <b>Winged Trig</b> - The Winged Trig setup is becoming more popular. The back lines are the same distances as the Standard Trig. The biggest difference is that the throwing area is pushed out to 6ft 9in and narrows to the traditional 4ft 6in in the front. This trig setup originally was used during foul weather to give the athletes a larger throwing area. Another benefit to the winged trig is that it is easier to judge. If the athlete touches the line or goes over it, the throw is no good or "a scratch".
             </p>
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
       <!-- Card Cabers-->
@@ -160,7 +156,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="cabers">
+        <event-modal id="cabers">
           <div slot="title">Cabers</div>
           <div
             slot="about"
@@ -168,7 +164,7 @@
           <div slot="judging">
             <img src="../assets/caberScore.gif" alt="caber score" class="caberScore" />
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
       <!-- Card Sheaf-->
@@ -182,7 +178,7 @@
           </div>
         </div>
         <!-- inject modal modal infor below-->
-        <EventModal id="sheaf">
+        <event-modal id="sheaf">
           <div slot="title">Sheaf</div>
           <div
             slot="about"
@@ -191,7 +187,7 @@
             <img src="../assets/sheafFork.png" alt="sheaf and fork" class="sheafFork" />
             <p>Lots of athletes will build their own sheaf forks, even though the event provides them. Using the same fork to throw with can help a thrower master this event. Sheaf forks can have 2 or 3 tines.</p>
           </div>
-        </EventModal>
+        </event-modal>
         <!-- End Card -->
       </div>
     </div>
@@ -200,20 +196,33 @@
 
 
 <script>
-import SmallEventCards from "../components/smallEventCard";
+import SmallCards from "../components/smallEventCard";
 import EventModal from "../components/eventModal";
 export default {
-  name: "home",
+  name: "Home",
   data() {
     return {};
   },
+  mounted() {
+    return this.$store.dispatch("getEvents");
+  },
   computed: {
     events() {
-      return this.$store.state.events;
+      return this.$store.state.events.filter(e => {
+        debugger;
+        let timeMs = Date.parse(e.eventDate);
+        timeMs >= this.today && timeMs <= this.endDate;
+      });
+    },
+    today() {
+      return this.$store.state.today;
+    },
+    endDate() {
+      return this.$store.state.endDate;
     }
   },
   methods: {},
-  components: { EventModal, SmallEventCards }
+  components: { EventModal, SmallCards }
 };
 </script>
 
@@ -313,7 +322,7 @@ export default {
 
 .eventCards {
   margin: 10px;
-  width: 25vw;
+  width: 15vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -322,9 +331,13 @@ export default {
     width: 100%;
   }
 }
-/* 
+
 .cardRow {
   display: flex;
   justify-content: space-evenly;
-} */
+}
+
+.eventCardRow {
+  justify-content: space-evenly;
+}
 </style>

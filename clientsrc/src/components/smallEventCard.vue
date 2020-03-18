@@ -26,4 +26,13 @@ export default {
 
 
 <style scoped>
+img {
+  height: 20vh;
+  width: 100%;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
 </style>
