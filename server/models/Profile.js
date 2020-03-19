@@ -8,11 +8,6 @@ const Profile = new Schema(
     name: { type: String, required: true },
     picture: { type: String },
     // NOTE If you wish to add additional public properties for profiles do so here
-    streetAddress: { type: String },
-    city: { type: String },
-    state: { type: String },
-    zipCode: { type: Number, maxlength: 5 },
-    phoneNumber: { type: Number, maxlength: 10 }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
