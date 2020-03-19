@@ -1,7 +1,7 @@
 <template>
   <div class="events container-fluid">
     <div class="row titleRow">
-      <h1>Upcoming Events</h1>
+      <h1>Events</h1>
     </div>
     <div class="row cardRow">
       <EventCards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
@@ -39,7 +39,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 92vh;
+  height: 90vh;
   width: 100%;
   overflow: hidden;
   overflow-y: auto;

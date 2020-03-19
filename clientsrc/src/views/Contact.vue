@@ -148,7 +148,7 @@ export default {
 
 <style scoped>
 .contact {
-  height: 92vh;
+  height: 90vh;
   background-image: url("../assets/contactbg.jpg");
   background-repeat: no-repeat;
   background-position: center;

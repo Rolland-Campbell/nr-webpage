@@ -12,8 +12,15 @@
         <h4>Click a card to go to the Event Page</h4>
       </div>
     </div>
-    <div class="row eventCardRow">
-      <small-cards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
+    <div class="row">
+      <div class="col-10 offset-1 eventCardRow">
+        <small-cards
+          class="eventCards"
+          v-for="event in events"
+          :key="event._id"
+          :eventProps="event"
+        />
+      </div>
     </div>
 
     <div class="row">
@@ -208,10 +215,13 @@ export default {
   },
   computed: {
     events() {
+      console.log("start time in ms", this.today);
+      console.log("end time in ms", this.endDate);
+
       return this.$store.state.events.filter(e => {
-        debugger;
         let timeMs = Date.parse(e.eventDate);
-        timeMs >= this.today && timeMs <= this.endDate;
+        return timeMs >= this.today && timeMs <= this.endDate;
+        console.log("time in ms", timeMs);
       });
     },
     today() {
@@ -233,7 +243,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 92vh;
+  height: 90vh;
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
@@ -338,6 +348,12 @@ export default {
 }
 
 .eventCardRow {
-  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.eventCards {
+  flex: 0 0 auto;
 }
 </style>

@@ -39,7 +39,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-height: 92vh;
+  min-height: 90vh;
 }
 
 @media only screen and (max-width: 600px) {

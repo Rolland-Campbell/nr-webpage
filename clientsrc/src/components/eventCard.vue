@@ -29,13 +29,13 @@
         </h5>
         <h5>
           <u>Website:</u>&ensp;
-          <a class="webLink" :href="'https://'+this.eventProps.link">{{this.eventProps.link}}</a>
+          <a class="webLink" :href="'https://'+ this.eventProps.link">{{this.eventProps.link}}</a>
         </h5>
         <p>
           <a
             class="linkInfo"
             data-toggle="collapse"
-            href="#collapseExample"
+            :href="'#collapseExample'+ this.eventProps._id"
             role="button"
             aria-expanded="false"
             aria-controls="collapseExample"
@@ -46,7 +46,7 @@
             </h5>
           </a>
         </p>
-        <div class="collapse" id="collapseExample">
+        <div class="collapse" :id="'collapseExample'+ this.eventProps._id">
           <div class="card card-body mb-3">
             <h5>{{this.eventProps.description}}</h5>
           </div>

@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .practices {
-  height: 92vh;
+  height: 90vh;
   background-image: url("../assets/practicebg.jpg");
   background-repeat: no-repeat;
   background-position: center;
