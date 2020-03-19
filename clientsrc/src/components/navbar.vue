@@ -29,13 +29,13 @@
         <li class="nav-item" :class="{ active: $route.name == 'Practices' }">
           <router-link :to="{ name: 'Practices' }" class="nav-link">Practices</router-link>
         </li>
-        <!-- <li
+        <li
           class="nav-item"
           v-if="$auth.isAuthenticated"
           :class="{ active: $route.name == 'Profile' }"
         >
           <router-link class="nav-link" :to="{ name: 'Profile' }">Profile</router-link>
-        </li>-->
+        </li>
         <li
           class="nav-item"
           v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
