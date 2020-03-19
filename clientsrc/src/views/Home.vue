@@ -352,6 +352,7 @@ export default {
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  height: 48vh;
 }
 .eventCards {
   flex: 0 0 auto;
