@@ -215,13 +215,9 @@ export default {
   },
   computed: {
     events() {
-      console.log("start time in ms", this.today);
-      console.log("end time in ms", this.endDate);
-
       return this.$store.state.events.filter(e => {
         let timeMs = Date.parse(e.eventDate);
         return timeMs >= this.today && timeMs <= this.endDate;
-        console.log("time in ms", timeMs);
       });
     },
     today() {
