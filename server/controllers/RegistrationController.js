@@ -3,6 +3,7 @@ import BaseController from "../utils/BaseController";
 import auth0Provider from "@bcwdev/auth0provider";
 import { registrationService } from "../services/RegistrationService";
 import { Forbidden } from "../utils/Errors";
+import PAYPAL from "paypal-rest-sdk";
 
 export class RegistrationController extends BaseController {
   constructor() {
@@ -11,6 +12,7 @@ export class RegistrationController extends BaseController {
       .get("", this.getAll)
       // NOTE: Beyond this point all routes require Authorization tokens (the user must be logged in)
       .use(auth0Provider.getAuthorizedUserInfo)
+      .post("/validate-purchase/:orderId", this.registrationPurchase)
       .post("", this.create)
       .put("/:id", this.edit)
       .delete("/:id", this.delete);
@@ -53,6 +55,15 @@ export class RegistrationController extends BaseController {
       return res.send(data)
     } catch (error) {
       next(error);
+    }
+  }
+
+  async registrationPurchase(req, res, next) {
+    let order;
+    try {
+      order = await PAYPAL.GetValidPurchase(req.params.orderId);
+    } catch (e) {
+      return next(e);
     }
   }
 }
