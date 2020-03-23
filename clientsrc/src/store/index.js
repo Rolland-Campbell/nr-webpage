@@ -120,6 +120,13 @@ export default new Vuex.Store({
       } catch (error) {
         console.error(error)
       }
+    },
+    async registerAthlete({ commit }, data) {
+      try {
+        let res = await api.post("registration", data)
+      } catch (error) {
+        console.error(error)
+      }
     }
   }
 });

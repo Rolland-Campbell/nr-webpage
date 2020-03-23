@@ -52,13 +52,7 @@
           </div>
         </div>
         <div class="regButton">
-          <!-- <button
-            class="btn btn-info"
-            data-toggle="modal"
-            data-target="#regModal"
-          >Register for this Event</button>-->
-          <!-- <RegModal :eventProps="eventProps" /> -->
-          <div id="paypal-button-container"></div>
+          <RegModal :eventProps="eventProps" :id="eventProps._id" />
         </div>
         <div
           class="buttonRow"
@@ -83,7 +77,7 @@
 
 
 <script>
-// import RegModal from "../components/registrationModal";
+import RegModal from "../components/registrationModal";
 import EventEditModal from "../components/editEventModal";
 export default {
   name: "EventCard",
@@ -92,30 +86,7 @@ export default {
     return {};
   },
   mounted() {
-    paypal
-      .Buttons({
-        createOrder: function(data, actions) {
-          // This function sets up the details of the transaction, including the amount and line item details.
-          return actions.order.create({
-            purchase_units: [
-              {
-                amount: {
-                  value: this.eventProps.cost
-                }
-              }
-            ]
-          });
-        },
-        onApprove: function(data, actions) {
-          // This function captures the funds from the transaction.
-          return actions.order.capture().then(function(details) {
-            // This function shows a transaction success message to your buyer.
-            alert("Transaction completed by " + details.payer.name.given_name);
-          });
-        }
-      })
-      .render("#paypal-button-container");
-    //This function displays Smart Payment Buttons on your web page.
+    return this.$store.state.events;
   },
   computed: {},
   methods: {
@@ -124,8 +95,8 @@ export default {
     }
   },
   components: {
-    EventEditModal
-    // RegModal
+    EventEditModal,
+    RegModal
   }
 };
 </script>

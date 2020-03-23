@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Registration = new Schema(
   {
+    name: { type: String, required: true },
     eventTitle: { type: String, required: true },
     eventDate: { type: String, required: true },
     registeredClass: { type: String, required: true },
