@@ -1,14 +1,8 @@
 <template>
   <div class="regModal">
     <p>
-      <button
-        class="btn btn-primary"
-        type="button"
-        data-toggle="collapse"
-        :data-target="'#contentId' + eventProps._id"
-        aria-expanded="false"
-        aria-controls="contentId"
-      >Register</button>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" :data-target="'#contentId' + eventProps._id"
+        aria-expanded="false" aria-controls="contentId">Register</button>
     </p>
     <div class="collapse" :id="'contentId' + eventProps._id">
       <div class="collapse-header">
@@ -54,70 +48,70 @@
 
 
 <script>
-export default {
-  name: "RegModal",
-  props: ["eventProps"],
-  data() {
-    return {
-      athlete: {
-        eventTitle: this.eventProps.title,
-        eventDate: this.eventProps.eventDate
-      },
-      visible: false
-    };
-  },
-  mounted() {
-    paypal
-      .Buttons({
-        createOrder: function(data, actions) {
-          // This function sets up the details of the transaction, including the amount and line item details.
-          return actions.order.create({
-            purchase_units: [
-              {
-                amount: {
-                  value: this.eventProps.cost
-                }
-              }
-            ]
-          });
+  export default {
+    name: "RegModal",
+    props: ["eventProps"],
+    data() {
+      return {
+        athlete: {
+          eventTitle: this.eventProps.title,
+          eventDate: this.eventProps.eventDate
         },
-        onApprove: function(data, actions) {
-          // This function captures the funds from the transaction.
-          return actions.order.capture().then(function(details) {
-            // This function shows a transaction success message to your buyer.
-            this.visible = false;
+        visible: false
+      };
+    },
+    mounted() {
+      paypal
+        .Buttons({
+          createOrder: function (data, actions) {
+            // This function sets up the details of the transaction, including the amount and line item details.
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: this.eventProps.cost
+                  }
+                }
+              ]
+            });
+          },
+          onApprove: function (data, actions) {
+            // This function captures the funds from the transaction.
+            return actions.order.capture().then(function (details) {
+              // This function shows a transaction success message to your buyer.
+              this.visible = false;
 
-            alert("Transaction completed by " + details.payer.name.given_name);
-          });
-        }
-      })
-      .render("#paypal-button-container" + this.eventProps._id);
-    //This function displays Smart Payment Buttons on your web page.
-  },
-  computed: {},
-  methods: {
-    register() {
-      this.$store.dispatch("registerAthlete", this.athlete);
-      this.athlete = {};
-      this.visible = true;
-    }
-  },
-  components: {}
-};
+              alert("Transaction completed by " + details.payer.name.given_name);
+            });
+          }
+        })
+        .render("#paypal-button-container" + this.eventProps._id);
+      //This function displays Smart Payment Buttons on your web page.
+    },
+    computed: {},
+    methods: {
+      register() {
+        this.$store.dispatch("registerAthlete", this.athlete);
+        this.athlete = {};
+        this.visible = true;
+      }
+    },
+    components: {}
+  };
 </script>
 
 
 <style scoped>
-.collapse-body {
-  display: grid;
-}
+  .collapse-body {
+    display: grid;
+  }
 
-input,
-select {
-  margin-bottom: 3vh;
-}
+  input,
+  select {
+    margin-bottom: 3vh;
+  }
 
-.btn {
-  margin-bottom: 3vh;
-}
+  .btn {
+    margin-bottom: 3vh;
+  }
 </style>

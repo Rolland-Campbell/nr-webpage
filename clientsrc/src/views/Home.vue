@@ -375,8 +375,9 @@
   }
 
   .eventCards {
-    margin: 10px;
-    width: 15vw;
+    /* margin-left: 3vw; */
+    margin-right: 3vw;
+    width: 20vw;
   }
 
   @media only screen and (max-width: 600px) {
@@ -397,6 +398,6 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    height: 48vh;
+    height: auto;
   }
 </style>

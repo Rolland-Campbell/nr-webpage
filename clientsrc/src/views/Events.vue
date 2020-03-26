@@ -11,72 +11,72 @@
 
 
 <script>
-import EventCards from "../components/eventCard";
-export default {
-  name: "Events",
-  data() {
-    return {};
-  },
-  mounted() {
-    return this.$store.dispatch("getEvents");
-  },
-  computed: {
-    events() {
-      return this.$store.state.events;
+  import EventCards from "../components/eventCard";
+  export default {
+    name: "Events",
+    data() {
+      return {};
+    },
+    mounted() {
+      return this.$store.dispatch("getEvents");
+    },
+    computed: {
+      events() {
+        return this.$store.state.events;
+      }
+    },
+    methods: {},
+    components: {
+      EventCards
     }
-  },
-  methods: {},
-  components: {
-    EventCards
-  }
-};
+  };
 </script>
 
 
 <style scoped>
-.events {
-  background-image: url("../assets/eventsbg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 90vh;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-}
-
-@media only screen and (max-width: 600px) {
   .events {
     background-image: url("../assets/eventsbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 92vh;
+    height: 90vh;
+    width: 100%;
     overflow: hidden;
     overflow-y: auto;
   }
-}
 
-.titleRow {
-  color: white;
-  text-shadow: 1px 1px black;
-  justify-content: center;
-}
+  @media only screen and (max-width: 600px) {
+    .events {
+      background-image: url("../assets/eventsbg.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 92vh;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
 
-.cardRow {
-  display: flex;
-  justify-content: space-evenly;
-}
+  .titleRow {
+    color: white;
+    text-shadow: 1px 1px black;
+    justify-content: center;
+  }
 
-.eventCards {
-  margin: 10px;
-  width: 25vw;
-}
+  .cardRow {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-@media only screen and (max-width: 600px) {
   .eventCards {
     margin: 10px;
-    width: 100%;
+    width: 25vw;
   }
-}
+
+  @media only screen and (max-width: 600px) {
+    .eventCards {
+      margin: 10px;
+      width: 100%;
+    }
+  }
 </style>
