@@ -39,7 +39,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 90vh;
+    height: 90svh;
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
