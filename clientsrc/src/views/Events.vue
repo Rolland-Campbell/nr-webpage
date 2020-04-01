@@ -11,7 +11,7 @@
 
 
 <script>
-  import EventCards from "../components/eventCard";
+  import EventCards from "../components/eventCards";
   export default {
     name: "Events",
     data() {
@@ -39,7 +39,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 90svh;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
@@ -66,17 +66,8 @@
   .cardRow {
     display: flex;
     justify-content: space-evenly;
-  }
-
-  .eventCards {
-    margin: 10px;
-    width: 25vw;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .eventCards {
-      margin: 10px;
-      width: 100%;
-    }
+    height: 100%;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 </style>
