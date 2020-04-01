@@ -91,7 +91,7 @@
 
 <style scoped>
   .card {
-    background-color: rgba(255, 255, 255, 0.616);
+    background-color: rgba(7, 5, 5, 0.616);
     border-color: black;
     border-style: solid;
   }
