@@ -73,7 +73,7 @@
         <button class="btn btn-secondary" @click="closeButton">X</button>
       </div>
       <label for="#">Name:</label>
-      <input class="mb-2" id="name" type="text" v-model="athlete.name" />
+      <input class id="name" type="text" v-model="athlete.name" />
       <label for="#class">Pick a class:</label>
       <select class="mb-2" id="class" v-model="athlete.registeredClass">
         <option value="A">A</option>
@@ -90,7 +90,7 @@
         <option value="Women's Masters 60+">Women's Masters 60+</option>
       </select>
       <label for="#shirt">Select a Shirt Size</label>
-      <select class="mb-5" id="shirt" v-model="athlete.shirtSize">
+      <select class="mb-2" id="shirt" v-model="athlete.shirtSize">
         <option value="kids">Kids</option>
         <option value="xs">XS</option>
         <option value="s">S</option>
