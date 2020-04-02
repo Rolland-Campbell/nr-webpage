@@ -40,7 +40,7 @@
         </select>
         Press Next to pay
         <button class="btn btn-info" @click="register">Next</button>
-        <div v-show="visible == true" :id="'paypal-button-container' + this.eventProps._id"></div>
+        <div v-show="visible == true" :id="'paypal' + this.eventProps._id"></div>
       </div>
     </div>
   </div>

@@ -38,14 +38,14 @@
       </div>
     </div>
     <!-- register tab -->
-    <div class="col-4 registerStyle" v-if="visibleReg == true">
+    <div class="col-4 registerStyle ml-2" v-if="visibleReg == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeButton">X</button>
       </div>
       <label for="#">Name:</label>
-      <input id="name" type="text" v-model="athlete.name" />
+      <input class="mb-2" id="name" type="text" v-model="athlete.name" />
       <label for="#class">Pick a class:</label>
-      <select id="class" v-model="athlete.registeredClass">
+      <select class="mb-2" id="class" v-model="athlete.registeredClass">
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
@@ -60,7 +60,7 @@
         <option value="Women's Masters 60+">Women's Masters 60+</option>
       </select>
       <label for="#shirt">Select a Shirt Size</label>
-      <select id="shirt" v-model="athlete.shirtSize">
+      <select class="mb-5" id="shirt" v-model="athlete.shirtSize">
         <option value="kids">Kids</option>
         <option value="xs">XS</option>
         <option value="s">S</option>
@@ -72,14 +72,14 @@
         <option value="4xl">4XL</option>
       </select>
       Press Next to pay
-      <button class="btn btn-info mt-4" @click="showPay">Next</button>
+      <button class="btn btn-info" @click="showPay">Next</button>
     </div>
     <!-- pay tab -->
-    <div class="col-2 payStyle" v-if="visiblePay == true">
+    <div class="col-2 payStyle ml-2 " v-if="visiblePay == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeAll">X</button>
       </div>
-      <div :id="'paypal-button-container' + this.eventProps._id"> test</div>
+      <div :id="'paypal' + this.eventProps._id"></div>
     </div>
   </div>
 </template>
@@ -117,12 +117,11 @@
             // This function captures the funds from the transaction.
             return actions.order.capture().then(function (details) {
               // This function shows a transaction success message to your buyer.
-              // this.visible = false;
               alert("Transaction completed by " + details.payer.name.given_name);
             });
           }
         })
-        .render("#paypal-button-container" + this.eventProps._id);
+        .render("#paypal" + this.eventProps._id);
       //This function displays Smart Payment Buttons on your web page.
     },
     methods: {
@@ -182,8 +181,6 @@
     align-content: center;
     background-color: rgba(255, 255, 255, 0.644);
     border-radius: 20px;
-    /* border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; */
     text-shadow: 1px 1px white;
   }
 
@@ -191,8 +188,6 @@
     align-content: center;
     background-color: rgba(255, 255, 255, 0.644);
     border-radius: 20px;
-    /* border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; */
   }
 
   img {
@@ -222,7 +217,7 @@
   .closeButton {
     position: absolute;
     right: 1rem;
-    top: 2rem;
+    top: 1rem;
   }
 
   .buttonRow {
