@@ -105,7 +105,7 @@
       <button class="btn btn-info" @click="showPay">Next</button>
     </div>
     <!-- pay tab -->
-    <div class="col-2 payStyle ml-2" v-if="visiblePay == true">
+    <div class="col-2 payStyle ml-2" v-show="visiblePay == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeAll">X</button>
       </div>
@@ -129,15 +129,16 @@ export default {
     };
   },
   mounted() {
+    let vm = this;
     paypal
       .Buttons({
-        createOrder: function(data, actions) {
+        createOrder(data, actions) {
           // This function sets up the details of the transaction, including the amount and line item details.
           return actions.order.create({
             purchase_units: [
               {
                 amount: {
-                  value: 20
+                  value: vm.eventProps.cost
                 }
               }
             ]
