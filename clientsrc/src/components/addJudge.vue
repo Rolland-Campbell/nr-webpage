@@ -19,6 +19,10 @@
       <h5>Judge Picture</h5>
     </label>
     <input id="pic" type="text" placeholder="link to judge's picture" v-model="judgeInfo.pic" />
+    <label for="email">
+      <h5>Judge's E-mail</h5>
+    </label>
+    <input id="email" type="email" placeholder="email address" v-model="judgeInfo.email" />
     <div class="buffer"></div>
     <button class="btn btn-success" @click="addJudge">Add Judge</button>
   </div>
@@ -26,45 +30,45 @@
 
 
 <script>
-export default {
-  name: "AddJudge",
-  data() {
-    return {
-      judgeInfo: {}
-    };
-  },
-  computed: {},
-  methods: {
-    addJudge() {
-      this.$store.dispatch("addJudge", this.judgeInfo);
-      this.judgeInfo = {};
-    }
-  },
-  components: {}
-};
+  export default {
+    name: "AddJudge",
+    data() {
+      return {
+        judgeInfo: {}
+      };
+    },
+    computed: {},
+    methods: {
+      addJudge() {
+        this.$store.dispatch("addJudge", this.judgeInfo);
+        this.judgeInfo = {};
+      }
+    },
+    components: {}
+  };
 </script>
 
 
 <style scoped>
-.addJudge {
-  margin: 10px;
-  display: grid;
-  padding: 13px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.432);
-}
-
-input {
-  margin-bottom: 2vh;
-}
-
-.buffer {
-  height: 18vh;
-}
-
-@media only screen and (max-width: 600px) {
-  .buffer {
-    height: 3vh;
+  .addJudge {
+    margin: 10px;
+    display: grid;
+    padding: 13px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.432);
   }
-}
+
+  input {
+    margin-bottom: 2vh;
+  }
+
+  .buffer {
+    height: 18vh;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .buffer {
+      height: 3vh;
+    }
+  }
 </style>
