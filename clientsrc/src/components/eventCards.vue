@@ -37,12 +37,13 @@
         </p>
       </a>
       <div class="collapse" :id="'collapseExample'+ this.eventProps._id">
-        <div class="card card-body mb-3" tabindex="2">
-          <p>{{this.eventProps.description}}</p>
+        <div class="card card-body">
+          <p class="infoText">{{this.eventProps.description}}
+          </p>
         </div>
       </div>
       <div class="registerButton">
-        <button class="btn btn-info fab" @click="register">Register</button>
+        <button class="btn btn-info" @click="register">Register</button>
       </div>
       <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
         <button class="btn btnSm btn-warning" data-toggle="modal" :data-target="'#editModal'+ eventProps.id">
@@ -174,7 +175,7 @@
 </script>
 <style>
   .cardStyle {
-    height: 35vh;
+    height: 40vh;
     margin-bottom: 2vh;
     display: flex;
   }
@@ -208,7 +209,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     text-shadow: 1px 1px white;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
 
   @media only screen and (max-width: 600px) {
@@ -274,7 +275,7 @@
   }
 
   img {
-    height: 90%;
+    height: 70%;
     width: 90%;
     border-radius: 20px;
   }
@@ -299,9 +300,8 @@
   }
 
   .registerButton {
-    position: absolute;
-    right: 1rem;
-    top: 42%;
+    text-align: center;
+    margin-top: 1vh;
   }
 
 
