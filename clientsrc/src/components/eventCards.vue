@@ -1,48 +1,48 @@
 <template>
   <div class="cardStyle col-12">
-    <div class="col-2 imgStyle">
+    <div class="col-md-2 imgStyle">
       <img :src="this.eventProps.logo" alt="logo" />
     </div>
-    <div class="col-4 eventInfo">
-      <div class="registerButton">
-        <button class="btn btn-info fab" @click="register">Register</button>
-      </div>
-      <h5>{{this.eventProps.title}}</h5>
-      <h5>
+    <div class="col-12 col-md-3 eventInfo">
+      <p>{{this.eventProps.title}}</p>
+      <p>
         <u>Date</u>
         : {{this.eventProps.eventDate | date}}
-      </h5>
-      <h5>
+      </p>
+      <p>
         <u>Time</u>
         : {{this.eventProps.eventTime}}
-      </h5>
-      <h5>
+      </p>
+      <p>
         <u>Host</u>
         : {{this.eventProps.host}}
-      </h5>
-      <h5>
+      </p>
+      <p>
         <u>Registration Cost:</u>
         ${{this.eventProps.cost}}
-      </h5>
-      <h5>
+      </p>
+      <p>
         <u>Location:</u>
         {{this.eventProps.location}}
-      </h5>
-      <h5>
+      </p>
+      <p>
         <u>Website:</u>&ensp;
         <a class="webLink" :href="'https://'+ this.eventProps.link">{{this.eventProps.link}}</a>
-      </h5>
+      </p>
       <a class="webLink" data-toggle="collapse" :href="'#collapseExample'+ this.eventProps._id" role="button"
         aria-expanded="false" aria-controls="collapseExample">
-        <h5>
+        <p>
           <u>Event Information:</u>&ensp;
           <span class="smallText">(Click to open)</span>
-        </h5>
+        </p>
       </a>
       <div class="collapse" :id="'collapseExample'+ this.eventProps._id">
         <div class="card card-body mb-3" tabindex="2">
-          <h5>{{this.eventProps.description}}</h5>
+          <p>{{this.eventProps.description}}</p>
         </div>
+      </div>
+      <div class="registerButton">
+        <button class="btn btn-info fab" @click="register">Register</button>
       </div>
       <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
         <button class="btn btnSm btn-warning" data-toggle="modal" :data-target="'#editModal'+ eventProps.id">
@@ -55,7 +55,7 @@
       </div>
     </div>
     <!-- register tab -->
-    <div class="col-4 registerStyle ml-2" v-if="visibleReg == true">
+    <div class="col-12 col-md-3 registerStyle md-ml-2" v-if="visibleReg == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeButton">X</button>
       </div>
@@ -92,7 +92,7 @@
       <button class="btn btn-info" @click="showPay">Next</button>
     </div>
     <!-- pay tab -->
-    <div class="col-2 payStyle ml-2" v-show="visiblePay == true">
+    <div class="col-12 col-md-3 payStyle md-ml-2" v-show="visiblePay == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeAll">X</button>
       </div>
@@ -174,9 +174,16 @@
 </script>
 <style>
   .cardStyle {
-    height: 40vh;
+    height: 35vh;
     margin-bottom: 2vh;
     display: flex;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cardStyle {
+      display: grid;
+      height: 60vh;
+    }
   }
 
   .imgStyle {
@@ -186,6 +193,12 @@
     background-color: rgba(255, 255, 255, 0.644);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .imgStyle {
+      display: none;
+    }
   }
 
   .eventInfo {
@@ -198,6 +211,21 @@
     overflow-y: hidden;
   }
 
+  @media only screen and (max-width: 600px) {
+    .eventInfo {
+      border-radius: 20px;
+    }
+  }
+
+  p {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .smallText {
+    font-size: smaller;
+  }
+
   .registerStyle {
     padding: 20px;
     display: grid;
@@ -207,10 +235,42 @@
     text-shadow: 1px 1px white;
   }
 
+  @media only screen and (max-width: 600px) {
+    .registerStyle {
+      position: absolute;
+      height: 60vh;
+      background-color: white;
+      z-index: 2;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    input,
+    select {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    label {
+      margin-top: 3vh;
+    }
+  }
+
   .payStyle {
     align-content: center;
     background-color: rgba(255, 255, 255, 0.644);
     border-radius: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .payStyle {
+      position: absolute;
+      height: 60vh;
+      background-color: white;
+      z-index: 3;
+    }
   }
 
   img {
@@ -231,10 +291,25 @@
     justify-content: center;
   }
 
+  @media only screen and (max-width: 600px) {
+    .btn.fab {
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
   .registerButton {
     position: absolute;
     right: 1rem;
     top: 42%;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .registerButton {
+      position: unset;
+    }
   }
 
   .closeButton {
