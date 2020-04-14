@@ -7,7 +7,7 @@
       <img class="locPic" src="../assets/practiceLocation.jpg" alt="practice location" />
     </div>
     <div class="row textRow">
-      <div class="col-8">
+      <div class="col-10">
         <p>We hold practice at McDevitt's Park on the corner of McMillan Rd and Eagle Rd. Practices are organized with
           trainers on site to help you start your experience, and to help seasoned athletes become better. We try and
           run practices every weekend from April - October. Practice will not be held on event weekends. If you are
