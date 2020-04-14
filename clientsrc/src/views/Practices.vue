@@ -2,9 +2,9 @@
   <div class="practices">
     <div class="row titleRow">
       <h1 class="text-center">Heavy Events Practice</h1>
-      <div class="col-10 offset-1">
-        <img class="locPic" src="../assets/practiceLocation.jpg" alt="practice location" />
-      </div>
+    </div>
+    <div class="col-10 offset-1">
+      <img class="locPic" src="../assets/practiceLocation.jpg" alt="practice location" />
     </div>
     <div class="row textRow">
       <div class="col-8">
@@ -60,7 +60,8 @@
   }
 
   .locPic {
-    height: 40vh;
+    height: 50vh;
+    width: 100%;
   }
 
   @media only screen and (max-width: 600px) {
