@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-body">
         <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
-        <h2 class="card-title">{{this.judgeProps.name}}</h2>
+        <h4 class="card-title">{{this.judgeProps.name}}</h4>
         <hr />
         <h5>Judge Since: {{this.judgeProps.date}}</h5>
         <h5>Home Town: {{this.judgeProps.homeTown}}</h5>
