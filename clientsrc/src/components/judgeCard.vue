@@ -3,11 +3,11 @@
     <div class="card">
       <div class="card-body">
         <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
-        <h4 class="card-title">{{this.judgeProps.name}}</h4>
+        <h5 class="card-title mt-3">{{this.judgeProps.name}}</h5>
         <hr />
-        <h5>Judge Since: {{this.judgeProps.date}}</h5>
-        <h5>Home Town: {{this.judgeProps.homeTown}}</h5>
-        <h5><a :href="'mailto:'+this.judgeProps.email">Contact {{this.judgeProps.name}}</a></h5>
+        <p>Judge Since: {{this.judgeProps.date}}</p>
+        <p>Home Town: {{this.judgeProps.homeTown}}</p>
+        <p><a :href="'mailto:'+this.judgeProps.email">Contact {{this.judgeProps.name}}</a></p>
         <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
           <button class="btn btn-warning" data-toggle="modal" :data-target="'#editModal'+ judgeProps.id">
             <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -69,6 +69,10 @@
 
   a {
     color: black;
+  }
+
+  p {
+    font-size: medium;
   }
 
   .buttonRow {

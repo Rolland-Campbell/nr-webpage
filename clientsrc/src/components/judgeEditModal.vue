@@ -10,6 +10,14 @@
           </button>
         </div>
         <div class="modal-body">
+          <!-- Picture -->
+          <label for="pic">
+            <h5>Picture</h5>
+          </label>
+          <div class="spacing">
+            New Picture:
+            <input id="pic" type="text" v-model="edit.pic" />
+          </div>
           <!-- Name -->
           <label for="name">
             <h5>Name</h5>

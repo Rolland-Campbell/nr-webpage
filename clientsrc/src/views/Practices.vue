@@ -75,6 +75,7 @@
   p {
     color: white;
     text-shadow: 1px 1px black;
+    font-size: large;
   }
 
   .textRow {
