@@ -6,7 +6,7 @@
         <h5 class="card-title mt-3">{{this.judgeProps.name}}</h5>
         <hr />
         <p>Judge Since: {{this.judgeProps.date | date}}</p>
-        <p>Home Town: {{this.judgeProps.homeTown}}</p>
+        <p>Home: {{this.judgeProps.homeTown}}</p>
         <p><a :href="'mailto:'+this.judgeProps.email">Contact <i class="fa fa-envelope-open-o"
               aria-hidden="true"></i></a></p>
         <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
@@ -47,7 +47,13 @@
 
 <style scoped>
   .card {
-    width: 20vw;
+    width: 15vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .card {
+      width: auto;
+    }
   }
 
   .judgePic {

@@ -8,7 +8,7 @@ const Judge = new Schema(
     homeTown: { type: String, required: true },
     pic: { type: String, required: true },
     creator: { type: String, required: true },
-    email: { type: String, required: true }
+    email: { type: String }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );

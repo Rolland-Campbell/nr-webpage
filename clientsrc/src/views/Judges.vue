@@ -60,6 +60,12 @@
     justify-content: center;
   }
 
+  @media only screen and (max-width: 600px) {
+    .titleRow {
+      text-align: center;
+    }
+  }
+
   .judgeCards {
     margin: 10px;
   }
