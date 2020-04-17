@@ -45,9 +45,13 @@
 
 
 <style scoped>
+  .card {
+    width: 20vw;
+  }
+
   .judgePic {
     height: 30vh;
-    width: 70%;
+    width: 90%;
     border-radius: 15px;
   }
 

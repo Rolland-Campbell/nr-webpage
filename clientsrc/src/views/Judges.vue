@@ -11,61 +11,61 @@
 
 
 <script>
-import JudgeCards from "../components/judgeCard";
-export default {
-  name: "Judges",
-  data() {
-    return {};
-  },
-  mounted() {
-    return this.$store.dispatch("getJudges");
-  },
-  computed: {
-    judges() {
-      return this.$store.state.judges;
+  import JudgeCards from "../components/judgeCard";
+  export default {
+    name: "Judges",
+    data() {
+      return {};
+    },
+    mounted() {
+      return this.$store.dispatch("getJudges");
+    },
+    computed: {
+      judges() {
+        return this.$store.state.judges;
+      }
+    },
+    methods: {},
+    components: {
+      JudgeCards
     }
-  },
-  methods: {},
-  components: {
-    JudgeCards
-  }
-};
+  };
 </script>
 
 
 <style scoped>
-.judges {
-  background-image: url("../assets/judgesbg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 90vh;
-}
-
-@media only screen and (max-width: 600px) {
   .judges {
     background-image: url("../assets/judgesbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 92vh;
-    overflow: hidden;
-    overflow-y: auto;
+    min-height: 90vh;
   }
-}
 
-.titleRow {
-  color: white;
-  text-shadow: 1px 1px black;
-  justify-content: center;
-}
+  @media only screen and (max-width: 600px) {
+    .judges {
+      background-image: url("../assets/judgesbg.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 92vh;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
 
-.judgeCards {
-  margin: 10px;
-}
+  .titleRow {
+    color: white;
+    text-shadow: 1px 1px black;
+    justify-content: center;
+  }
 
-.cardRow {
-  display: flex;
-  justify-content: center;
-}
+  .judgeCards {
+    margin: 10px;
+  }
+
+  .cardRow {
+    display: flex;
+    justify-content: center;
+  }
 </style>
