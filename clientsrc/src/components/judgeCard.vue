@@ -5,9 +5,10 @@
         <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
         <h5 class="card-title mt-3">{{this.judgeProps.name}}</h5>
         <hr />
-        <p>Judge Since: {{this.judgeProps.date}}</p>
+        <p>Judge Since: {{this.judgeProps.date | date}}</p>
         <p>Home Town: {{this.judgeProps.homeTown}}</p>
-        <p><a :href="'mailto:'+this.judgeProps.email">Contact {{this.judgeProps.name}}</a></p>
+        <p><a :href="'mailto:'+this.judgeProps.email">Contact <i class="fa fa-envelope-open-o"
+              aria-hidden="true"></i></a></p>
         <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
           <button class="btn btn-warning" data-toggle="modal" :data-target="'#editModal'+ judgeProps.id">
             <i class="fa fa-pencil" aria-hidden="true"></i>
