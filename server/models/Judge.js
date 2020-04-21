@@ -6,6 +6,7 @@ const Judge = new Schema(
     name: { type: String, required: true },
     date: { type: String, required: true },
     homeTown: { type: String, required: true },
+    state: { type: String, required: true },
     pic: { type: String, required: true },
     creator: { type: String, required: true },
     email: { type: String }

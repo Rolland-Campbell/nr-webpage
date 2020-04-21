@@ -7,6 +7,7 @@
         <hr />
         <p>Judge Since: {{this.judgeProps.date | date}}</p>
         <p>Home: {{this.judgeProps.homeTown}}</p>
+        <p>State: {{this.judgeProps.state}}</p>
         <p><a :href="'mailto:'+this.judgeProps.email">Contact <i class="fa fa-envelope-open-o"
               aria-hidden="true"></i></a></p>
         <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
@@ -47,7 +48,7 @@
 
 <style scoped>
   .card {
-    width: 15vw;
+    width: 20vw;
   }
 
   @media only screen and (max-width: 600px) {
@@ -57,7 +58,7 @@
   }
 
   .judgePic {
-    height: 30vh;
+    height: 25vh;
     width: 90%;
     border-radius: 15px;
   }
