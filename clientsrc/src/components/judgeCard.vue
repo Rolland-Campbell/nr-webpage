@@ -8,8 +8,8 @@
         <p>Judge Since: {{this.judgeProps.date | date}}</p>
         <p>Home: {{this.judgeProps.homeTown}}</p>
         <p>State: {{this.judgeProps.state}}</p>
-        <p><a :href="'mailto:'+this.judgeProps.email">Contact <i class="fa fa-envelope-open-o"
-              aria-hidden="true"></i></a></p>
+        <p v-if="judgeProps.email.length > 1"><a :href="'mailto:'+this.judgeProps.email">Contact <i
+              class="fa fa-envelope-open-o" aria-hidden="true"></i></a></p>
         <div class="buttonRow" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'">
           <button class="btn btn-warning" data-toggle="modal" :data-target="'#editModal'+ judgeProps.id">
             <i class="fa fa-pencil" aria-hidden="true"></i>
