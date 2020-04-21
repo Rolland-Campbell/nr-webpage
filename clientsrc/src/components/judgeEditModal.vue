@@ -71,7 +71,6 @@
     computed: {},
     methods: {
       editJudge() {
-        debugger
         this.$store.dispatch("editJudge", this.edit);
         this.edit = {};
       }

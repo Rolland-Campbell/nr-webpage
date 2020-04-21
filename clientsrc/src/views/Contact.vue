@@ -64,7 +64,7 @@
       <MemberCard id="jenn">
         <div slot="pic">
           <img
-            src="https://lh3.googleusercontent.com/PHyk_UTg2vUAJ61Ol4UIhBKb_ReBTfjDf7gX8dgPlMZrXgQEgrMmT81kO3D1RKmWP7YVMlQVzb8abjo2yvDbMv19eRFy0IFYy4yMVWitYqQPEuFWgVFOx15YybbId09J4IG8Ev1peVMNyMatruqEj8oq2-x1OwS8p25EgQ0ToEgPuAGbOIWMPHTsOM7_GrRnClVo-vyAfUIBAEkCDTOIpZmydoJNNq5aFv3k5m-MP7th98R4CIfKatsRyixOjH4Y5xiWUGW7z7sdot8XotVilwnP1cbayJFYrsuv2MtlzkWz7xuasYinp-mkvnVjlpWpdkKy06aN_OKn2X0WXfA7gcQmrWKpC0ymC4eQlgdD2IFFJBcJ8tlfxlC980LFo0sSQVn2fWVnzY-bm4lXiLOUpBD2NktJ1yY-mdMWTWUVSA4PDTV0IMlNfnibftkU-IfHLL4GZsQcWHa85OnfgkMahLZYatRCz1il5Hso1jOlcT4VnPlhIcE4Xb97QftTPQBWMsyq-b2kI32kUn__yQwUZOLopYWR8QgMKebYgnrk2_9lU3smHkKtpMvU9_S0hHoKbLl8N42owlX7XtWrBbjVu7KISsz8wIADBAIyEjy5jy43Gs10ELTrl_rWaZCuMajnQzGRbrNrL4D9V1viSD9aRtZKPlWWmkAt6sbvYBp9rksIaLDsReMV-Zs4ONLc9g=w1406-h937-no"
+            src="https://lh3.googleusercontent.com/Ds0DHaOOaCSAugcbZujqRk8w2-yEly2IjFMJpSECYcFRMt2pG6lP5st33mCCdWPYra9o4orkMzgPKBLupyiFqswbdxbHNNY9zGjJCo9b672TaJ02CKpZX-uS-MKRKgs11QJU4e4rUtKjPQRFqxfvhGUROMZTpX7_qvADyGeBakgICoPQSNRWUGhFD-BjJSvJ8WFTxwcda1_vJEUOfAnundQ6-MVlTmTuy5JlXEsPdV1nF6OKy6OTG4v71V4a8u8Ah3cxj50_nPVcLln3-I-yVXUvMAREKpCIHF5aCOOScbkU42NgodlqGWaEXm07T6XqV2nFXn00iI2PfwC49cj9YUkQYU5uV89QT6yUSJnHRUyap4xIuWme_PBb0wsZpsKaN1GaoQFskzvpPnPaDRcuZTMgRUqrYRNPUdC5yWwGXj8nlE9gU_tfNltMhtaoBHNfrwtK4d1waoBHrd4Bpfol8c9nBKyChdyUyAGv0JyNF9hdjYWpNfH3ZavL-Q0z2IU96by4fOgsmxpE8LBjqOJLRaFuGPlc1aiFljAYBie69KDYKEbgW0f6Cg9f1mn_n7fqqKRP0kepRxh_rrDElBTFZkcHdfexDFjNfKvEXRle4V4Jimn5Iiu73RPJ_cCr5kiewox303LASmDKwG6z9hghQQ9FDyDqKeffIk-e4rRk8Zo9dtM1S3mcppZo2Wfj1w=w891-h937-no"
             alt="jenn" />
         </div>
         <div slot="name">
@@ -78,7 +78,7 @@
       <MemberCard id="shelly">
         <div slot="pic">
           <img
-            src="https://lh3.googleusercontent.com/d_1c6KL5HlIL2SpIaaEEn2XXQCdvv2dNb3HbSr0UEq8KdYYkhvuncruO4xKP4ubr7mBCmSK-1lm5A8Qx59RZkcvrVR812bgel0tqG_tqiAopOHR0U8gz7coIycYsE-QPC-9xyVPJrfU-nI4_DzEBYKTj1L2NYyUKdIY4oGADeRS3atnkah65VIExrHiIp6inkqGg68KYoca4QJcalUiwT1idgX3HBsrBZ4PXIq3gAgsAMoURjjey2O4QNazTWqYTAeREU0gKGGtwy9IeRiqGfzE0xDID4L3BtmSZxkCxdjonj8AK-UW0LkfrHNeW2RTyb2bf2rFXbVOJGbz1MzQBR7gzeu8i1eJpKb9siOn6AIeiqbu859_yU-mgmNIz0VqCB6Qqzo5sMhZayvmYWFTWUGbvtPCnGw2iZSGlzYjPURCp0vqMTIGeCW7RnZblwHkrkpWmsaF4k_rEZnVPqvzqrP6NaYDrvzEQg4YH9S1xNeliXkoku8opUOakzgFVgnmrSWQS7kEksZcB2X-QXzjMI3-ijWgvyrnOFc-dOFFiwXHf-QuPlJQX3kSpdkZfd3FqHbZqHDqlppYD8F2nAJx_OH_2OQfhOkHxeicVYO8JiI2Yc1ke5IY_g1VWcldCOXUiv8WlfRFkGvHRYyNGzIkrlBWB8UreLxTRPuw_Y6DbLrcFgbaLYxI9zQMed4pupA=w703-h937-no"
+            src="https://lh3.googleusercontent.com/NqCo-EX1NcdztkJh2Wsxbx2RAFsVX0kSu9I6hspuFzD9jUhfXQKh-o0-79V9L6A8arA6UPzB2_3zHsXhCFqVRX3QQuBoJ4-U4otpSfUyQB0QfNC7pKtDCfHQ5tO-LTOAwFDgmA_qxI83U129EDn7bcBNK-joD6FUrbpY82evyecVL2aYPpeMPXmjaXEJthcadspAobExVJvmyHKiHiRhk_g2fsZaZlp_1UzGBZmuCGD1lD73BsMcKArU12eebeci0V8atI9eoPFT2Q8LypGCjqm3h0sB3ctPCHcuGTlIggWP02SPmIN-axU8SmIDVprJBLMFNlyr-jR-AthVMZd7rptAcoewnwmevxkpfJSbxk-yJz4QpyecBtpBmR9zFog4JUPzrffF2cUVklUKAD9D4NaZ9gtb2LG5vJpBGiNQM3D6l0yI9wbBjxqwBbqTcrsMXKsEr6vUeewLPmtM6m8O5kcAPsz1d8K6-M6ZjFA1hhnEGemI1q3taMoSxMCKy9JZLU7gOkxt-xTgyrOtYK0H2jylyZQOGWdWgFRAHBhwCEGtcMigXFIqMauNeODhNOYRhUomKXNijELzFHplXt1fH2VH0biVV_34V0J5ylkZRSfuYbzzxcmkyUNk0SdD3lXWpj42-MggwsrapeG8-eQeaRdwhbzOpO30su-9FfqwZCA0sJsq2wbiIg4cfKlRlw=w670-h937-no"
             alt="shelly" />
         </div>
         <div slot="name">

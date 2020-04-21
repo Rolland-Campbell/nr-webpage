@@ -102,7 +102,6 @@
     computed: {},
     methods: {
       addJudge() {
-        debugger
         this.$store.dispatch("addJudge", this.judgeInfo);
         this.judgeInfo = {};
       }
