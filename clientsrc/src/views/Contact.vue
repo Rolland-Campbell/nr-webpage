@@ -63,7 +63,9 @@
       <!-- Card -->
       <MemberCard id="jenn">
         <div slot="pic">
-          <img src="https://photos.app.goo.gl/TZNknjy4kWs1W7kU8" alt="jenn" />
+          <img
+            src="https://lh3.googleusercontent.com/S1AoB6rX-8K7N3dr1B60EPwY0ZHtGDa2o7cOYsQSvOwr2Iyxp98LkrfYvuRA5Pa65f6FMzj3jIDO52mWHp7ctMlua27ZR2IV6EqLNF-cSLinJ_MbfD5xvE5eIhCKnfP0EEikWNpjA9e8foqYYYlg0Yv78F1N97OK2dEGVuwHLtaueQx9s8EOUR1_0Spf7CabjcrBSE5UIieauTehDpGiC-TkccUi0bWRYlVT2RhkFEWVCBz2BhGRyoq0KlEwHQwrwoj7LGTK89gAH-NLOUHwo8ogkWMInOBAyB3edEdOKV4Jc6j-1MPWF0Dn5Tn1nV4wehlTugKZcYxrHpeSekMDppGwmk2XxK_wpJKBv3h43TzlFR8aQQBg08exUqY5TvzohGEmVCvG0gWTD80rXKoGP8kd04e2dveZ4VLO0mLN2BUOkW4mljs0AOAtcOv5LEksNbyzXtjRmYVbwpHSRw_EETqcBjKm2NKWeSDk3FOE2OtBVzo4_XfaCIrV9WUpqMPiJozRm12jtCMGrI1oFavoYw-kC0Dcb9ULfjXpVOsvK1zxxz7-h-T0Y1stxrN8XWvFkjmfHNnNbHdJxrMtr4Zuy0yt9uCd-dlcNjPJu9gafZcnfVt4t0pwRNLlwSY_Zolca9LKPwPsNmHJNRV5fiwyBcRRooe2HzF5ashMZuZOYlrN6X8ykTUbxNiCUdg0Qg=w891-h937-no"
+            alt="jenn" />
         </div>
         <div slot="name">
           <h2>Jen Gempler</h2>
