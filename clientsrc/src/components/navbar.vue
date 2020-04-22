@@ -35,7 +35,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        <button class="btn btn-success" @click="login" v-if="!$auth.isAuthenticated">Login / Register</button>
+        <button class="btn btn-success" @click="login" v-if="!$auth.isAuthenticated">Admin Login</button>
         <button class="btn btn-danger" @click="logout" v-else>logout</button>
       </span>
     </div>

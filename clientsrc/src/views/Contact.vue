@@ -63,9 +63,7 @@
       <!-- Card -->
       <MemberCard id="jenn">
         <div slot="pic">
-          <img
-            src="https://lh3.googleusercontent.com/Ds0DHaOOaCSAugcbZujqRk8w2-yEly2IjFMJpSECYcFRMt2pG6lP5st33mCCdWPYra9o4orkMzgPKBLupyiFqswbdxbHNNY9zGjJCo9b672TaJ02CKpZX-uS-MKRKgs11QJU4e4rUtKjPQRFqxfvhGUROMZTpX7_qvADyGeBakgICoPQSNRWUGhFD-BjJSvJ8WFTxwcda1_vJEUOfAnundQ6-MVlTmTuy5JlXEsPdV1nF6OKy6OTG4v71V4a8u8Ah3cxj50_nPVcLln3-I-yVXUvMAREKpCIHF5aCOOScbkU42NgodlqGWaEXm07T6XqV2nFXn00iI2PfwC49cj9YUkQYU5uV89QT6yUSJnHRUyap4xIuWme_PBb0wsZpsKaN1GaoQFskzvpPnPaDRcuZTMgRUqrYRNPUdC5yWwGXj8nlE9gU_tfNltMhtaoBHNfrwtK4d1waoBHrd4Bpfol8c9nBKyChdyUyAGv0JyNF9hdjYWpNfH3ZavL-Q0z2IU96by4fOgsmxpE8LBjqOJLRaFuGPlc1aiFljAYBie69KDYKEbgW0f6Cg9f1mn_n7fqqKRP0kepRxh_rrDElBTFZkcHdfexDFjNfKvEXRle4V4Jimn5Iiu73RPJ_cCr5kiewox303LASmDKwG6z9hghQQ9FDyDqKeffIk-e4rRk8Zo9dtM1S3mcppZo2Wfj1w=w891-h937-no"
-            alt="jenn" />
+          <img src="https://photos.app.goo.gl/TZNknjy4kWs1W7kU8" alt="jenn" />
         </div>
         <div slot="name">
           <h2>Jen Gempler</h2>
@@ -78,7 +76,7 @@
       <MemberCard id="shelly">
         <div slot="pic">
           <img
-            src="https://lh3.googleusercontent.com/NqCo-EX1NcdztkJh2Wsxbx2RAFsVX0kSu9I6hspuFzD9jUhfXQKh-o0-79V9L6A8arA6UPzB2_3zHsXhCFqVRX3QQuBoJ4-U4otpSfUyQB0QfNC7pKtDCfHQ5tO-LTOAwFDgmA_qxI83U129EDn7bcBNK-joD6FUrbpY82evyecVL2aYPpeMPXmjaXEJthcadspAobExVJvmyHKiHiRhk_g2fsZaZlp_1UzGBZmuCGD1lD73BsMcKArU12eebeci0V8atI9eoPFT2Q8LypGCjqm3h0sB3ctPCHcuGTlIggWP02SPmIN-axU8SmIDVprJBLMFNlyr-jR-AthVMZd7rptAcoewnwmevxkpfJSbxk-yJz4QpyecBtpBmR9zFog4JUPzrffF2cUVklUKAD9D4NaZ9gtb2LG5vJpBGiNQM3D6l0yI9wbBjxqwBbqTcrsMXKsEr6vUeewLPmtM6m8O5kcAPsz1d8K6-M6ZjFA1hhnEGemI1q3taMoSxMCKy9JZLU7gOkxt-xTgyrOtYK0H2jylyZQOGWdWgFRAHBhwCEGtcMigXFIqMauNeODhNOYRhUomKXNijELzFHplXt1fH2VH0biVV_34V0J5ylkZRSfuYbzzxcmkyUNk0SdD3lXWpj42-MggwsrapeG8-eQeaRdwhbzOpO30su-9FfqwZCA0sJsq2wbiIg4cfKlRlw=w670-h937-no"
+            src="https://lh3.googleusercontent.com/eeMtCjZIu4dYixx1WTFUkqkptmpXBNkfCWns4CTsmrz1n8l66_yXzc1tsA7zhC77DID06gC2T5Df2HPiLNzYxxmfNYQ6rvWOx_oDBACrgUrlLmacv1mqNW_NhZhkcSHHE1xsu-d2uA=w2400"
             alt="shelly" />
         </div>
         <div slot="name">
