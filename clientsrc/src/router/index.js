@@ -13,7 +13,8 @@ import Contact from "../views/Contact.vue";
 // @ts-ignore
 import Judges from "../views/Judges.vue";
 import { authGuard } from "@bcwdev/auth0-vue";
-
+// @ts-ignore
+import Classes from "../views/Classes.vue";
 // @ts-ignore
 import Practices from "../views/Practices.vue"
 
@@ -56,6 +57,11 @@ const routes = [
     path: "/practices",
     name: "Practices",
     component: Practices,
+  },
+  {
+    path: "/classes",
+    name: "Classes",
+    component: Classes,
   },
 ];
 

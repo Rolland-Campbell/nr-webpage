@@ -13,6 +13,8 @@
         <li class="nav-item" :class="{ active: $route.name == 'Events' }">
           <router-link :to="{ name: 'Events' }" class="nav-link">Events</router-link>
         </li>
+        <li class="nav-item" :class="{ active: $route.name == 'Classes' }">
+          <router-link :to="{ name: 'Classes' }" class="nav-link">Throwing Classes</router-link>
         <li class="nav-item" :class="{ active: $route.name == 'Judges' }">
           <router-link :to="{ name: 'Judges' }" class="nav-link">Judges / ADs</router-link>
         </li>
