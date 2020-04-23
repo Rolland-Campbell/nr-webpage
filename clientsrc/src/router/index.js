@@ -17,6 +17,8 @@ import { authGuard } from "@bcwdev/auth0-vue";
 import Classes from "../views/Classes.vue";
 // @ts-ignore
 import Practices from "../views/Practices.vue"
+// @ts-ignore
+import Sponsors from "../views/Sponsors.vue"
 
 Vue.use(VueRouter);
 
@@ -62,6 +64,11 @@ const routes = [
     path: "/classes",
     name: "Classes",
     component: Classes,
+  },
+  {
+    path: "/sponsors",
+    name: "Sponsors",
+    component: Sponsors,
   },
 ];
 

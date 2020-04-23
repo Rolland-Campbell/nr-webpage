@@ -36,7 +36,7 @@
       <MemberCard id="will">
         <div slot="pic">
           <img
-            src="https://ch3301files.storage.live.com/y4pc8-7cm38GV3TbyaDmV08d4at26KzjPd8bpiYBfhFewATW7CrQ3kW8jGTyUWpZYpuGEUbQnxDK4ZBAx0YK2vhuab7muIvNfMSD4YBSLDBTDHFZXcLV-sQtimjyvKGBHWBqjuHxwJJqqgbGlmD7T8mIZNbPsyShbHXL-f9uuD8tI0vBl_D4Xprmg9LOJgTnx-gt3EEACstmrEBa7dF5pRkwIk1EKJS4sorGRQMJzTWWgc/WIll.JPG?psid=1&width=454&height=467"
+            src="https://lh3.googleusercontent.com/bAZGQi51T96glHOi1Mo5JVlhSFEMia3vaTbHWy0KJFEe0-bG8EO693AEyMqg8632gO6lYK7sO4nKhExi5NzGh30ZEmkmYy_zPZ5fRpNNSM4b_J0VC2HPvZK6pu0_CacHXbEJQ3PEji53mejrck3TC5yFAz_PwQE4bkFnINcDzSez6u370VTU4upoqru7bHAlaSQOzwPlCih717ZiK1TaS7L-f94rmCV9KRl3hbvAGCLfTnJnW_1kKKd_fRau08xUXwAljWHBnfVYfHL89DXjJEzctqST20I0XfDGg7o_G86Gh74E8hmDUtj91LrPhRAhwKfmyendmRqxiAEox70b9Bau9J_4Fy55E5xiLSLGlDKM898BtzSljNRHdXhiBz3cIocLU3UI0tGzmxcDHyF-ceDAzOqNdkNmstSZQLLdMkyDpdsVksiOrjd2aE_ng2Pr6ZeSFMa3Okgu1cTWMgZzbZFiIPSVU1tOXKPfTsG6FiW8gc6AZwrMg2osc-EfIHMQ5qCtB7uCU971tPHvMOBMpvdFrriaGHraHV_NI-ERXwxbDntz1GblNlN9ShvLiNT_K6XWRNxUQhhyZ55Ru45kNVUg8wLE9LZro1Yehsuuin0-l_G6QyGu-kix7wVm-2uwSLBWRLrGtA7g06OznIHMnlF7WUGdTATst7y-lIPiBxZfNXHaEL4BzTaXDTKiIQ=w473-h467-no"
             alt="will" />
         </div>
         <div slot="name">

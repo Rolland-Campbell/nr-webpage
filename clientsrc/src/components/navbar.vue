@@ -24,6 +24,9 @@
         <li class="nav-item" :class="{ active: $route.name == 'Practices' }">
           <router-link :to="{ name: 'Practices' }" class="nav-link">Practices</router-link>
         </li>
+        <li class="nav-item" :class="{ active: $route.name == 'Sponsors' }">
+          <router-link :to="{ name: 'Sponsors' }" class="nav-link"><b class="sponsor">Become a Sponsor</b></router-link>
+        </li>
         <!-- <li
           class="nav-item"
           v-if="$auth.isAuthenticated"
@@ -70,5 +73,9 @@
   .logoSize {
     height: 8vh;
     width: 10vw;
+  }
+
+  .sponsor {
+    color: Red;
   }
 </style>
