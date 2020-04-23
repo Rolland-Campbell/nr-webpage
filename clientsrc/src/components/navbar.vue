@@ -27,13 +27,6 @@
         <li class="nav-item" :class="{ active: $route.name == 'Sponsors' }">
           <router-link :to="{ name: 'Sponsors' }" class="nav-link"><b class="sponsor">Become a Sponsor</b></router-link>
         </li>
-        <!-- <li
-          class="nav-item"
-          v-if="$auth.isAuthenticated"
-          :class="{ active: $route.name == 'Profile' }"
-        >
-          <router-link class="nav-link" :to="{ name: 'Profile' }">Profile</router-link>
-        </li>-->
         <li class="nav-item" v-if="$auth.isAuthenticated && $auth.userInfo.app_metadata.role == 'admin'"
           :class="{ active: $route.name == 'Admin' }">
           <router-link class="nav-link" :to="{ name: 'Admin' }">Admin</router-link>
