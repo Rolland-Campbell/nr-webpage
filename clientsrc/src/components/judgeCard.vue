@@ -49,11 +49,15 @@
 <style scoped>
   .card {
     width: 20vw;
+    color: black;
+    text-shadow: 1px 1px white;
   }
 
   @media only screen and (max-width: 600px) {
     .card {
       width: auto;
+      color: black;
+      text-shadow: 1px 1px white;
     }
   }
 

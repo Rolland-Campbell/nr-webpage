@@ -121,9 +121,11 @@
     overflow-y: auto;
   }
 
-  h1 {
-    color: white;
-    text-shadow: 1px 1px black;
+  h1,
+  h2,
+  h4 {
+    color: black;
+    text-shadow: 1px 1px white;
   }
 
   .practiceRow {

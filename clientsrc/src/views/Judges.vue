@@ -38,8 +38,10 @@
     background-image: url("../assets/judgesbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 90vh;
+    background-size: 100vw 100%;
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   @media only screen and (max-width: 600px) {
@@ -55,8 +57,8 @@
   }
 
   .titleRow {
-    color: white;
-    text-shadow: 1px 1px black;
+    color: black;
+    text-shadow: 1px 1px white;
     justify-content: center;
   }
 
