@@ -63,7 +63,7 @@
 
   .judgePic {
     height: 25vh;
-    width: 90%;
+    width: 70%;
     border-radius: 15px;
   }
 
