@@ -15,7 +15,7 @@
   export default {
     name: "Events",
     data() {
-      return {};
+      return {}
     },
     mounted() {
       return this.$store.dispatch("getEvents");
@@ -23,6 +23,9 @@
     computed: {
       events() {
         return this.$store.state.events;
+      },
+      date() {
+        return this.$store.state.today;
       }
     },
     methods: {},

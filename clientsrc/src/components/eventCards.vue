@@ -334,4 +334,15 @@
     top: 13vh;
     /* left: 2vw; */
   }
+
+  .infoText {
+    color: black;
+    text-shadow: 1px 1px white;
+  }
+
+  .card-title,
+  .card-text {
+    color: black;
+    text-shadow: 1px 1px white;
+  }
 </style>

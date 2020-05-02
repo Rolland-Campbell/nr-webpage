@@ -322,6 +322,11 @@
     }
   }
 
+  h5 {
+    color: black;
+    text-shadow: 1px 1px white;
+  }
+
   .card {
     border-radius: 20px;
     margin: 5px;
