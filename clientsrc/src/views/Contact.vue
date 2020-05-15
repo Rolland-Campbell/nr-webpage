@@ -126,13 +126,19 @@
 
 <style scoped>
   .contact {
-    height: 90vh;
+    height: 92vh;
     background-image: url("../assets/contactbg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     overflow: hidden;
     overflow-y: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .contact {
+      height: 93vh;
+    }
   }
 
   h1,

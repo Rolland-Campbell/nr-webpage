@@ -346,7 +346,7 @@
   }
 
   .card-img-top {
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     padding-top: 0px;
     border-top-left-radius: 20px;
@@ -408,7 +408,7 @@
       overflow-x: auto;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
-      height: 32vh;
+      height: 36vh;
     }
   }
 </style>

@@ -65,6 +65,8 @@
     height: 25vh;
     width: 70%;
     border-radius: 15px;
+    display: flex;
+    justify-self: center;
   }
 
   .card {

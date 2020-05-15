@@ -39,7 +39,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vw 100%;
-    height: 90vh;
+    height: 92vh;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -50,7 +50,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      height: 92vh;
+      height: 93vh;
       overflow: hidden;
       overflow-y: auto;
     }

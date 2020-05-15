@@ -42,13 +42,20 @@
 
 <style scoped>
   .practices {
-    height: 90vh;
+    height: 92vh;
     background-image: url("../assets/practicebg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     overflow: hidden;
     overflow-y: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .practices {
+      height: 93vh;
+      padding-bottom: 2vh;
+    }
   }
 
   .titleRow {
@@ -75,7 +82,7 @@
   p {
     color: white;
     text-shadow: 1px 1px black;
-    font-size: large;
+    font-size: smaller;
   }
 
   .textRow {
