@@ -34,9 +34,7 @@
         <div class="card" data-toggle="modal" data-target="#w4d">
           <img class="card-img-top" src="../assets/w4d.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Weight for Distance</h5>
-            </h5>
+            <p class="cardText">Weight for Distance</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -85,9 +83,7 @@
         <div class="card" data-toggle="modal" data-target="#wob">
           <img class="card-img-top" src="../assets/wob.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Weight Over Bar (WOB)</h5>
-            </h5>
+            <p class="cardText">Weight Over Bar (WOB)</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -117,9 +113,7 @@
         <div class="card" data-toggle="modal" data-target="#hammers">
           <img class="card-img-top" src="../assets/hammer.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Scottish Hammers</h5>
-            </h5>
+            <p class="cardText">Scottish Hammers</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -149,9 +143,7 @@
         <div class="card" data-toggle="modal" data-target="#stones">
           <img class="card-img-top" src="../assets/stones.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Braemar / Open Stone</h5>
-            </h5>
+            <p class="cardText">Braemar / Open Stone</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -199,9 +191,7 @@
         <div class="card" data-toggle="modal" data-target="#cabers">
           <img class="card-img-top" src="../assets/caber.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Cabers</h5>
-            </h5>
+            <p class="cardText">Cabers</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -226,9 +216,7 @@
         <div class="card" data-toggle="modal" data-target="#sheaf">
           <img class="card-img-top" src="../assets/sheaf.jpg" alt="SA Flag" />
           <div class="card-body">
-            <h5 class="mb-0">
-              <h5>Sheaf</h5>
-            </h5>
+            <p class="cardText">Sheaf</p>
           </div>
         </div>
         <!-- inject modal modal infor below-->
@@ -303,6 +291,18 @@
     font-size: small;
   }
 
+  .cardText {
+    color: black;
+    text-shadow: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cardText {
+      color: black;
+      font-size: large;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     .titleRow {
       background-color: black;
@@ -330,21 +330,13 @@
     }
   }
 
-  h5 {
-    color: black;
-    text-shadow: 1px 1px white;
-  }
-
   .card {
     border-radius: 20px;
-    /* margin: 5px; */
     background-color: white;
   }
 
   .cardRow {
     justify-content: space-evenly;
-    padding: 30px;
-    padding: 0px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -354,7 +346,7 @@
   }
 
   .card-img-top {
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     padding-top: 0px;
     border-top-left-radius: 20px;
@@ -400,11 +392,6 @@
       margin: 10px;
       width: 100%;
     }
-  }
-
-  .cardRow {
-    display: flex;
-    justify-content: space-evenly;
   }
 
   .eventCardRow {
