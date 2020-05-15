@@ -30,13 +30,7 @@
     <label for="#desc">
       <h5>Description</h5>
     </label>
-    <input
-      id="desc"
-      type="text"
-      placeholder="Enter a short description"
-      v-model="eventInfo.description"
-      required
-    />
+    <input id="desc" type="text" placeholder="Enter a short description" v-model="eventInfo.description" required />
     <label for="#loc">
       <h5>Event Address</h5>
     </label>
@@ -51,48 +45,48 @@
 
 
 <script>
-export default {
-  name: "AddEvent",
-  data() {
-    return {
-      eventInfo: {
-        creator: this.$auth.user.email,
-        logo: ""
-      }
-    };
-  },
-  computed: {},
-  methods: {
-    createEvent() {
-      if (this.eventInfo.logo == "") {
-        this.eventInfo.logo =
-          "https://ak3.picdn.net/shutterstock/videos/14389933/thumb/1.jpg";
+  export default {
+    name: "AddEvent",
+    data() {
+      return {
+        eventInfo: {
+          creator: this.$auth.user.email,
+          logo: ""
+        }
+      };
+    },
+    computed: {},
+    methods: {
+      createEvent() {
+        if (this.eventInfo.logo == "") {
+          this.eventInfo.logo =
+            "https://ak3.picdn.net/shutterstock/videos/14389933/thumb/1.jpg";
+          this.$store.dispatch("createEvent", this.eventInfo);
+          this.eventInfo = {};
+        }
         this.$store.dispatch("createEvent", this.eventInfo);
         this.eventInfo = {};
       }
-      this.$store.dispatch("createEvent", this.eventInfo);
-      this.eventInfo = {};
-    }
-  },
-  components: {}
-};
+    },
+    components: {}
+  };
 </script>
 
 
 <style scoped>
-input {
-  margin-bottom: 2vh;
-}
+  input {
+    margin-bottom: 2vh;
+  }
 
-.inputStyle {
-  margin: 10px;
-  display: grid;
-  padding: 13px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.432);
-}
+  .inputStyle {
+    margin: 10px;
+    display: grid;
+    padding: 13px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.432);
+  }
 
-.eventRow {
-  display: initial;
-}
+  .eventRow {
+    display: initial;
+  }
 </style>

@@ -22,9 +22,12 @@
     },
     computed: {
       events() {
-        return this.$store.state.events;
+        return this.$store.state.events.filter(e => {
+          let timeMs = Date.parse(e.eventDate);
+          return timeMs >= this.today;
+        });
       },
-      date() {
+      today() {
         return this.$store.state.today;
       }
     },
