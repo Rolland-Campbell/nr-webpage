@@ -5,6 +5,20 @@
     </div>
     <div class="row cardRow">
       <!-- Card -->
+      <MemberCard id="ron">
+        <div slot="pic">
+          <img
+            src="https://previews.dropbox.com/p/thumb/AAyHs7JpVCfZ5Z8R0dwF-tGU2mib10gW0JqrKpNDUj3XH3tfZH2A_W_FpGngvOrHVrZsaX7jbImULztDtMOITXSOWwb_ckTvY8FQry9_9piloFP7jU2h3MPCWKQiKtoJi-yPe4P6XPBXCFf44Ht3Xmw0X1QbH5fXd6Uast6rtRdqvxnBFypoSzKUP3LvQ_J-1kL1lKAlewRXl6f5KHyYsx4QzwTB5aY41oKkvFgp3tv2sTeS89Ma4PnCREDm-qv5SQpJ5fS1Bft12m6iEDXsew3ARnGJCD452GUzFHiD1wfsW0mhn_mAWkm1lcftLDtQRF5coKobK2fnA5xcLikSgbdR/p.jpeg?fv_content=true&size_mode=5"
+            alt="ron" />
+        </div>
+        <div slot="name">
+          <h2>Ron Campbell</h2>
+        </div>
+        <div slot="position">
+          <h4>Chief</h4>
+        </div>
+      </MemberCard>
+      <!-- Card -->
       <MemberCard id="polly">
         <div slot="pic">
           <img
