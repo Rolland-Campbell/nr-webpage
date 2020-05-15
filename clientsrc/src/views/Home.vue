@@ -1,7 +1,8 @@
 <template>
   <div class="home container-fluid">
     <div class="row titleRow">
-      <div class="col-10 col-md-8">The Northern Rockies is a 501-(c)3 (81-4950693) charitable organization that strives
+      <div class="col-12 col-md-10 offset-md-1">The Northern Rockies is a 501-(c)3 (81-4950693) charitable organization
+        that strives
         to educate the communities in which we work about Scottish culture and the history of Scottish Highland Games.
         Our group of highly motivated volunteers help Scottish Festivals run Scottish Highland Games or Heavy Events
         around the world. We are based out of Boise Idaho, but have sister chapters in Oregon, Washington, Montana, and
@@ -10,19 +11,19 @@
 
     <div class="row">
       <div class="col eventTitle">
-        <h1>Upcoming Events</h1>
+        <h3>Upcoming Events</h3>
         <p>Click a card to go to the Event Page</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-10 offset-md-1 eventCardRow">
+      <div class="col-12 eventCardRow">
         <SmallCards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
       </div>
     </div>
 
     <div class="row">
       <div class="col eventTitle">
-        <h1>Scottish Heavy Events</h1>
+        <h3>Scottish Heavy Events</h3>
         <p>For more information on each event, click a card</p>
       </div>
     </div>
@@ -287,7 +288,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 90vh;
+    height: 92vh;
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
@@ -313,7 +314,8 @@
   }
 
   .eventTitle {
-    background-color: rgba(0, 0, 0, 0.65);
+    margin-top: 0px;
+    background-color: black;
     margin-top: 3vh;
     text-align: center;
     font-size: 4vh;
@@ -342,6 +344,7 @@
   .cardRow {
     justify-content: space-evenly;
     padding: 30px;
+    padding: 0px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -353,6 +356,7 @@
   .card-img-top {
     height: 20vh;
     width: 100%;
+    padding-top: 0px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -387,7 +391,7 @@
   }
 
   .eventCards {
-    margin-right: 3vw;
+    margin-right: 1vw;
     width: 20vw;
   }
 
@@ -407,7 +411,17 @@
     display: flex;
     overflow-x: auto;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    height: 38vh;
+    height: 30vh;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .eventCardRow {
+      display: flex;
+      justify-content: space-between;
+      overflow-x: auto;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      height: 32vh;
+    }
   }
 </style>

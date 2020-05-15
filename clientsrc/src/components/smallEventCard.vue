@@ -29,18 +29,24 @@
 
 <style scoped>
   img {
-    height: 20vh;
+    height: 12vh;
     width: 100%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    img {
+      padding: 0px;
+    }
   }
 
   .card {
     background-color: white;
-    width: 20vw;
+    width: 15vw;
   }
 
   @media only screen and (max-width: 600px) {
     .card {
-      width: 50vw;
+      width: 55vw;
     }
   }
 
