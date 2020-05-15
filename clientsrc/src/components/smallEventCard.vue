@@ -35,6 +35,13 @@
 
   .card {
     background-color: white;
+    width: 20vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .card {
+      width: 50vw;
+    }
   }
 
   .card-title,

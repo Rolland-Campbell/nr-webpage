@@ -15,8 +15,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-10 offset-1 eventCardRow">
-        <small-cards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
+      <div class="col-12 col-md-10 offset-md-1 eventCardRow">
+        <SmallCards class="eventCards" v-for="event in events" :key="event._id" :eventProps="event" />
       </div>
     </div>
 
@@ -335,7 +335,7 @@
 
   .card {
     border-radius: 20px;
-    margin: 5px;
+    /* margin: 5px; */
     background-color: white;
   }
 
@@ -404,11 +404,10 @@
   }
 
   .eventCardRow {
-    justify-content: center;
     display: flex;
-    flex-wrap: nowrap;
     overflow-x: auto;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
-    height: auto;
+    height: 38vh;
   }
 </style>
