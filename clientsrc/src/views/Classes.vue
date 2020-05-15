@@ -249,10 +249,11 @@
 <style>
   .classesStyle {
     height: 90vh;
-    background-image: url("../assets/classesbg.jpg");
+    background-color: rgb(29, 65, 173);
+    /* background-image: url("../assets/classesbg.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
     overflow: hidden;
     overflow-y: auto;
     text-align: center;

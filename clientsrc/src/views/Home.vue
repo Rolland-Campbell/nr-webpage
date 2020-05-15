@@ -10,8 +10,8 @@
 
     <div class="row">
       <div class="col eventTitle">
-        <b>Upcoming Events</b>
-        <h4>Click a card to go to the Event Page</h4>
+        <h1>Upcoming Events</h1>
+        <p>Click a card to go to the Event Page</p>
       </div>
     </div>
     <div class="row">
@@ -22,8 +22,8 @@
 
     <div class="row">
       <div class="col eventTitle">
-        <b>Scottish Heavy Events</b>
-        <h4>For more information on each event, click a card</h4>
+        <h1>Scottish Heavy Events</h1>
+        <p>For more information on each event, click a card</p>
       </div>
     </div>
 
@@ -298,6 +298,10 @@
     margin-top: 3vh;
   }
 
+  p {
+    font-size: small;
+  }
+
   @media only screen and (max-width: 600px) {
     .titleRow {
       background-color: black;
@@ -309,10 +313,12 @@
   }
 
   .eventTitle {
+    background-color: rgba(0, 0, 0, 0.65);
     margin-top: 3vh;
     text-align: center;
     font-size: 4vh;
-    text-shadow: 1px 1px white;
+    color: white;
+    text-shadow: 1px 1px black;
   }
 
   @media only screen and (max-width: 600px) {
@@ -330,6 +336,7 @@
   .card {
     border-radius: 20px;
     margin: 5px;
+    background-color: white;
   }
 
   .cardRow {
@@ -380,7 +387,6 @@
   }
 
   .eventCards {
-    /* margin-left: 3vw; */
     margin-right: 3vw;
     width: 20vw;
   }

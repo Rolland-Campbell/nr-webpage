@@ -5,7 +5,7 @@
         <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
         <h5 class="card-title mt-3">{{this.judgeProps.name}}</h5>
         <hr />
-        <p>Judge Since: {{this.judgeProps.date | date}}</p>
+        <!-- <p>Judge Since: {{this.judgeProps.date | date}}</p> -->
         <p>Home: {{this.judgeProps.homeTown}}</p>
         <p>State: {{this.judgeProps.state}}</p>
         <p v-if="judgeProps.email.length > 1"><a :href="'mailto:'+this.judgeProps.email">Contact <i

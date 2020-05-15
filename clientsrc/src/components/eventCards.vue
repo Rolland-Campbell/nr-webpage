@@ -191,7 +191,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
@@ -205,7 +205,7 @@
   .eventInfo {
     display: grid;
     align-content: center;
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     overflow-y: auto;
@@ -230,7 +230,7 @@
     padding: 20px;
     display: grid;
     align-content: center;
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255);
     border-radius: 20px;
   }
 
@@ -259,7 +259,7 @@
 
   .payStyle {
     align-content: center;
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255);
     border-radius: 20px;
   }
 

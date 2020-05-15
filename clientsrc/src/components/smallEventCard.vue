@@ -14,31 +14,35 @@
 
 
 <script>
-export default {
-  name: "smallEventCard",
-  props: ["eventProps"],
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-  components: {}
-};
+  export default {
+    name: "smallEventCard",
+    props: ["eventProps"],
+    data() {
+      return {};
+    },
+    computed: {},
+    methods: {},
+    components: {}
+  };
 </script>
 
 
 <style scoped>
-img {
-  height: 20vh;
-  width: 100%;
-}
+  img {
+    height: 20vh;
+    width: 100%;
+  }
 
-.card-title,
-.card-text {
-  text-align: center;
-}
+  .card {
+    background-color: white;
+  }
 
-.nav-link {
-  color: black;
-}
+  .card-title,
+  .card-text {
+    text-align: center;
+  }
+
+  .nav-link {
+    color: black;
+  }
 </style>
