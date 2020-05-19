@@ -34,7 +34,7 @@
     border-color: black;
     border-style: solid;
     margin: 5px;
-    width: auto;
+    width: 30vw;
   }
 
   @media only screen and (max-width: 600px) {

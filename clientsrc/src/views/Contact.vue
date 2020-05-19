@@ -173,10 +173,4 @@
     border-color: black;
     border-style: solid;
   }
-
-  /* @media only screen and (max-width: 600px) {
-    img {
-      height: 60vh;
-    }
-  } */
 </style>
