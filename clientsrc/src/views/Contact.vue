@@ -165,7 +165,7 @@
   }
 
   img {
-    height: 30vh;
+    height: 50vh;
     width: 70%;
     border-radius: 50%;
     padding: 0;
@@ -173,4 +173,10 @@
     border-color: black;
     border-style: solid;
   }
+
+  /* @media only screen and (max-width: 600px) {
+    img {
+      height: 60vh;
+    }
+  } */
 </style>

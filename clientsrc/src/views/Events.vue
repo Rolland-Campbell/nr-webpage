@@ -63,6 +63,12 @@
     }
   }
 
+  @media only screen and (max-width: 768px) {
+    .events {
+      height: 95vh;
+    }
+  }
+
   .titleRow {
     color: white;
     text-shadow: 1px 1px black;

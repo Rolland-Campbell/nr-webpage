@@ -3,7 +3,7 @@
     <div class="col-md-2 imgStyle">
       <img :src="this.eventProps.logo" alt="logo" />
     </div>
-    <div class="col-12 col-md-3 eventInfo">
+    <div class="col-12 col-md-4 col-lg-3 eventInfo">
       <p>{{this.eventProps.title}}</p>
       <p>
         <u>Date</u>
@@ -56,7 +56,7 @@
       </div>
     </div>
     <!-- register tab -->
-    <div class="col-12 col-md-3 registerStyle md-ml-2" v-if="visibleReg == true">
+    <div class="col-12 col-md-4 col-lg-3 registerStyle md-ml-2" v-if="visibleReg == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeButton">X</button>
       </div>
@@ -93,7 +93,7 @@
       <button class="btn btn-info" @click="showPay">Next</button>
     </div>
     <!-- pay tab -->
-    <div class="col-12 col-md-3 payStyle md-ml-2" v-show="visiblePay == true">
+    <div class="col-12 col-md-4 col-lg-3 payStyle md-ml-2" v-show="visiblePay == true">
       <div class="closeButton">
         <button class="btn btn-secondary" @click="closeAll">X</button>
       </div>
@@ -187,6 +187,16 @@
     }
   }
 
+  @media only screen and (min-width: 700px) {
+    .cardStyle {
+      height: 41vh;
+    }
+
+    #class {
+      width: 100%;
+    }
+  }
+
   .imgStyle {
     display: flex;
     justify-content: center;
@@ -197,6 +207,12 @@
   }
 
   @media only screen and (max-width: 600px) {
+    .imgStyle {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
     .imgStyle {
       display: none;
     }

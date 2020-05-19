@@ -16,38 +16,38 @@
 
 
 <script>
-export default {
-  name: "MemberCard",
-  props: ["id"],
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-  components: {}
-};
+  export default {
+    name: "MemberCard",
+    props: ["id"],
+    data() {
+      return {};
+    },
+    computed: {},
+    methods: {},
+    components: {}
+  };
 </script>
 
 
 <style scoped>
-.card {
-  border-color: black;
-  border-style: solid;
-  margin: 5px;
-  width: 18vw;
-}
-
-@media only screen and (max-width: 600px) {
   .card {
     border-color: black;
     border-style: solid;
     margin: 5px;
-    width: 100%;
+    width: auto;
   }
-}
 
-.memberCard {
-  display: flex;
-  justify-content: center;
-}
+  @media only screen and (max-width: 600px) {
+    .card {
+      border-color: black;
+      border-style: solid;
+      margin: 5px;
+      width: 100%;
+    }
+  }
+
+  .memberCard {
+    display: flex;
+    justify-content: center;
+  }
 </style>

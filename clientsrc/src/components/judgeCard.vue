@@ -1,5 +1,5 @@
 <template>
-  <div class="judgeCard col-10 offset-1 col-md-6 col-lg-3">
+  <div class="judgeCard col-10 offset-1 col-sm-3">
     <div class="card">
       <div class="card-body">
         <img class="judgePic" :src="this.judgeProps.pic" alt="judge pic" />
@@ -55,7 +55,7 @@
 
   @media only screen and (max-width: 600px) {
     .card {
-      width: auto;
+      width: 23vw;
       color: black;
       text-shadow: 1px 1px white;
     }

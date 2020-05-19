@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row infoBanner">
       <div class="col eventTitle">
         <h3>Scottish Heavy Events</h3>
         <p>For more information on each event, click a card</p>
@@ -30,7 +30,7 @@
 
     <div class="row cardRow">
       <!-- Card W4D-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#w4d">
           <img class="card-img-top" src="../assets/w4d.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -79,7 +79,7 @@
         <!-- End Card -->
       </div>
       <!-- Card WOB-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#wob">
           <img class="card-img-top" src="../assets/wob.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -109,7 +109,7 @@
         <!-- End Card -->
       </div>
       <!-- Card Hammers-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#hammers">
           <img class="card-img-top" src="../assets/hammer.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -139,7 +139,7 @@
         <!-- End Card -->
       </div>
       <!-- Card Stones-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#stones">
           <img class="card-img-top" src="../assets/stones.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -187,7 +187,7 @@
         <!-- End Card -->
       </div>
       <!-- Card Cabers-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#cabers">
           <img class="card-img-top" src="../assets/caber.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -212,7 +212,7 @@
         <!-- End Card -->
       </div>
       <!-- Card Sheaf-->
-      <div class="col-10 col-md-2">
+      <div class="col-10 col-md-4 col-lg-2">
         <div class="card" data-toggle="modal" data-target="#sheaf">
           <img class="card-img-top" src="../assets/sheaf.jpg" alt="SA Flag" />
           <div class="card-body">
@@ -289,6 +289,10 @@
 
   p {
     font-size: small;
+  }
+
+  .infoBanner {
+    margin-top: -27px;
   }
 
   .cardText {
